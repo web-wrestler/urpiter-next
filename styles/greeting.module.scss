@@ -1,0 +1,110 @@
+
+.greeting {
+  min-height: 807rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: linear-gradient(125.42deg, rgba(255, 255, 255, 0.7) 23.04%, rgba(255, 255, 255, 0) 78.92%), url('../public/bg/bg-greeting.png');
+  // background-image: url('../public/bg/bg-greeting.png');
+  background-size: cover;
+  background-position: 0 -80rem;
+  
+  &__info {
+    margin: 25rem 0rem 0 200rem;
+    color: #1B2B4B;
+    font-family: 'Inter';
+
+    &_tagline {
+      font-family: 'Cormorant Unicase';
+      font-weight: 500;
+      font-size: 32rem;
+      line-height: 140%;
+      margin: 0;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 44rem;
+      line-height: 130%;
+      margin: 93rem 0 0;
+    }
+
+    &_subtitle {
+      font-weight: 700;
+      font-size: 28rem;
+      line-height: 130%;
+      margin: 5rem 0 0;
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 22rem;
+      line-height: 140%;
+      margin: 42rem 0 0;
+    }
+
+    &_contact {
+      display: flex;
+
+      &_tel {
+        font-family: 'Cormorant Infant';
+        font-weight: 700;
+        font-size: 60rem;
+        line-height: 140%;
+        margin: 0 90rem 0 0;
+      }
+
+      &_social {
+        width: 62rem;
+        height: 62rem;
+        margin: 0 21rem 0 0;
+        border-radius: 50%;
+        border: none;
+        background-size: cover;
+           
+        &:hover {
+          cursor: pointer;
+        }
+
+        &_watsapp {
+          background-image: url('../public/icons/social-watsapp.svg');
+        }
+        &_vk {
+          background-image: url('../public/icons/social-vk.svg');
+        }
+        &_telegram {
+          background-image: url('../public/icons/social-telegram.svg');
+        }
+      }
+
+    }
+    &_consultation {
+      width: 363rem;
+      height: 57rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: 22rem;
+      line-height: 140%;
+      color: #fff;
+      background-color: #F2A446;
+      box-shadow: 3rem 4rem 6rem rgba(164, 94, 10, 0.2);
+      border-radius: 8rem;
+      margin: 50rem 0 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  &__image {
+    margin: 83rem 0 0 168rem;
+    width: 760rem;
+    height: 603rem;
+  }
+
+
+}

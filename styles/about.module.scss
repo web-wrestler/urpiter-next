@@ -1,0 +1,91 @@
+.about {
+    height: 882rem;
+    background-image: url('../public/bg/bg-about.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    font-family: 'Inter';
+    color: #1B2B4B;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__name {
+        margin: 117rem auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &_text {
+          font-family: 'Cormorant Unicase';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 140%;
+          margin: 0 0 8rem;
+        }
+        &_line {
+          width: 221rem;
+          height: 1rem;
+          background: radial-gradient(50% 50% at 50% 50%, #1B2B4B 0%, rgba(27, 43, 75, 0) 100%);
+        }
+    }
+
+    &__info {
+        width: 1010rem;
+        padding: 33rem 0 0 200rem;
+
+        &_title {
+          margin: 0;
+          font-weight: 700;
+          font-size: 42rem;
+          line-height: 130%;
+        }
+
+        &_description {
+            margin: 41rem 0 0;
+          font-weight: 500;
+          font-size: 22rem;
+          line-height: 180%;
+        }
+
+        &_advantages {
+          list-style: none;
+          display: flex;
+          margin: 47rem 0 0;
+          padding: 0;
+
+          &_item {
+            max-width: 219rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+          }
+
+          &_img {
+            width: 86rem;
+            height: 96rem;
+          }
+
+          &_text {
+            font-weight: 500;
+            font-size: 20rem;
+            line-height: 135%;
+            text-align: center;
+            margin: 20rem 0 0;
+          }
+
+        }
+    }
+
+    &__planet {
+        width: 245rem;
+        height: 264rem;
+        position: absolute;
+        right: 166rem;
+        top: 148rem;
+    }
+
+}

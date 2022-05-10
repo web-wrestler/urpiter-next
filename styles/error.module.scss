@@ -1,0 +1,22 @@
+$colorError: red;
+
+.container {
+  min-height: 700px;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  font-size: 42rem;
+  color: $colorError;
+  margin: 20rem 0;
+
+  &_text {
+    color: #fff;
+    font-size: 24rem;
+    margin: 40rem 0;
+  }
+} 
+

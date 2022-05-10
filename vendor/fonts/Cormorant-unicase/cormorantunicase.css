@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: local('Cormorant Unicase Medium'), local('CormorantUnicase-Medium'),
+        url('CormorantUnicase-Medium.woff2') format('woff2'),
+        url('CormorantUnicase-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: local('Cormorant Unicase Regular'), local('CormorantUnicase-Regular'),
+        url('CormorantUnicase-Regular.woff2') format('woff2'),
+        url('CormorantUnicase-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: local('Cormorant Unicase SemiBold'), local('CormorantUnicase-SemiBold'),
+        url('CormorantUnicase-SemiBold.woff2') format('woff2'),
+        url('CormorantUnicase-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: local('Cormorant Unicase Bold'), local('CormorantUnicase-Bold'),
+        url('CormorantUnicase-Bold.woff2') format('woff2'),
+        url('CormorantUnicase-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: local('Cormorant Unicase Light'), local('CormorantUnicase-Light'),
+        url('CormorantUnicase-Light.woff2') format('woff2'),
+        url('CormorantUnicase-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+

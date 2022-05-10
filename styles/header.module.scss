@@ -1,0 +1,51 @@
+
+.header {
+  height: 80rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #D8D8D8;
+  padding: 0 200rem;
+  background-image: url('../public/bg/bg-greeting.png');
+  background-size: cover;
+  
+  &_logo {
+    min-width: 257rem;
+    margin: 0 220rem 0 0rem;
+  }
+
+  &_btn_container {
+    width: 400rem;
+    height: 50rem;
+    margin: 0 0rem 0 0;
+    display: flex;
+  }
+
+  &_btn {
+    height: 48rem;
+    border-radius: 8rem;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16rem;
+    line-height: 140%;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+   &_phone {
+    width: 132rem;
+    background-color: #1B2B4B;
+    margin: 0 12rem 0 0;
+   }
+   
+   &_profile {
+     width: 195rem;
+     background-color: #F2A446;
+   }
+  }
+}
