@@ -90,7 +90,7 @@ h1 {
 
 .slider_navs {
   position: absolute;
-  top: 240rem;
+  top: 190rem;
   border: none;
   width: 28rem;
   height: 49.2rem;
@@ -114,6 +114,15 @@ h1 {
 .custom_prev {  
   left: 290rem;
   background-image: url(../public/icons/arrow_left_slider.svg);
+}
+
+.custom_next_reviews {
+  right: 320rem;
+  background-image: url(../public/icons/arrow_right_slider_white.svg);
+}
+.custom_prev_reviews {  
+  left: 290rem;
+  background-image: url(../public/icons/arrow_left_slider_white.svg);
 }
 
 .swiper-pagination {

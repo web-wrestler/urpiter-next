@@ -1,0 +1,134 @@
+.consultation {
+    height: 877rem;
+    display: flex;
+    flex-direction: column;
+    // background-color: #F2A446;
+    background-image: url('../public/bg/bg-consultation.png');
+    background-size: cover;
+    // box-shadow: inset 0px 7rem 100rem rgba(255, 255, 255, 0.25);
+    color: #fff;
+
+
+    &__name {
+        margin: 80rem auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &_text {
+          font-family: 'Cormorant Unicase';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22rem;
+          line-height: 140%;
+          margin: 0 0 8rem;
+        }
+        &_line {
+          width: 221rem;
+          height: 1rem;
+          background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        }
+      }
+
+      &__container {
+          margin: 26.6rem 0 0 415rem;
+          width: 1100rem;
+      }
+    
+      &__title {
+        margin: 32rem 0 0;
+        font-weight: 700;
+        font-size: 46rem;
+        line-height: 130%;
+      }
+
+      &__description {
+        font-weight: 400;
+        font-size: 18rem;
+        line-height: 140%;
+        margin: 16rem 0 0;
+      }
+
+      &__checkbox {
+          display: flex;
+          align-items: center;
+          margin: 37rem 0 0;
+
+        &_input {
+          width: 33rem;
+          height: 33rem;
+          margin: 0 17rem 0 0;
+          background: #FFFFFF;
+          border: 1px solid #C9D5E8;
+          box-shadow: inset 0 0 34rem #F2F2F2;
+          border-radius: 8rem;
+          border: none;
+        }
+
+        &_label {
+          font-weight: 600;
+          font-size: 20rem;
+          line-height: 140%;
+          margin: 0;
+        }
+      }
+
+      &__form {
+          width: 100%;
+          margin: 37rem 0 0;
+
+          &_container {
+              display: flex;
+              justify-content: space-between;
+          }
+
+          &_input {
+              width: 352rem;
+              height: 56rem;
+              border: none;
+              border-radius: 8rem;
+              padding: 0 0 0 16rem;
+
+              font-family: 'Inter';
+              font-weight: 500;
+              font-size: 16rem;
+              line-height: 140%;
+
+              &::placeholder {
+                color: #859AB5;
+              }
+          }
+
+          &_textarea {
+              width: 100%;
+              height: 188rem;
+              margin: 26rem 0 0;
+              border: none;
+              border-radius: 8rem;
+              padding: 27rem 0 0 16rem;
+
+              font-family: 'Inter';
+              font-weight: 500;
+              font-size: 16rem;
+              line-height: 140%;
+
+              &::placeholder {
+                color: #859AB5;
+              }
+          }
+
+          &_btn {
+              width: 100%;
+              height: 77rem;
+              margin: 26rem 0 0;
+              background: #1B2B4B;
+              border-radius: 8rem;
+              border: none;
+              font-weight: 600;
+              font-size: 22rem;
+              line-height: 140%;
+              color: #fff;
+          }
+      }
+
+}

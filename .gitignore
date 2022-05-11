@@ -2,7 +2,9 @@ node_modules
 info.txt
 
 .next
+.next/*
 /.next
+
 
 /node_modules
 /.pnp

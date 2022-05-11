@@ -1,0 +1,61 @@
+
+
+.slider {
+  // min-height: 700px;
+  padding: 70rem 0rem 40rem 0rem;
+}
+@media screen and (max-width: 768px) {
+
+}
+
+.slide {
+  width: 330rem;
+  max-width: 330rem;
+  height: 288rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4rem solid #FFF;
+  border-radius: 15rem;
+  position: relative;
+  padding: 0 5rem;
+
+    
+    &_avatar {
+      width: 120rem;
+      height: 120rem;
+      position: absolute;
+      top: -64rem;
+      border-radius: 50%;
+      border: 4rem solid #F2A446;
+      background-color: #1B2B4B;
+      overflow: hidden;
+    }
+
+    &_name {
+      font-weight: 800;
+      font-size: 18rem;
+      line-height: 28rem;
+      margin: 68rem auto 0;
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 16rem;
+      line-height: 24rem;
+      margin: 28rem 5rem 0;
+      text-align: center;
+      letter-spacing: 0.75px;
+
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+
+    &:hover {
+      cursor: pointer;
+    
+    }
+}
+

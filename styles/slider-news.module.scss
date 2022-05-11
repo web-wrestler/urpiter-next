@@ -1,0 +1,96 @@
+
+
+.slider {
+  // min-height: 700px;
+  padding: 40rem 0rem 40rem 0rem;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    padding: 285rem 35rem 50rem;
+  }
+}
+
+.slide {
+  width: 330rem;
+  max-width: 330rem;
+  height: 370rem;
+
+  &_container {
+    height: 360rem;
+    transition: 0.3s linear;
+    border-radius: 14rem;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 15rem 30rem;
+    box-shadow: 2rem 2rem 20rem rgba(70, 38, 0, 0.1);
+    background-color: #fff;
+
+    &_date {
+      font-family: 'Cormorant Unicase';
+      font-weight: 500;
+      font-size: 23rem;
+      line-height: 140%;
+      color: #000;
+      margin: 0;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 18rem;
+      line-height: 140%;
+      color: #000;
+      margin: 18rem 0 0;
+
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    &_text{
+      font-weight: 400;
+      font-size: 14rem;
+      line-height: 140%;
+      margin: 15rem 0 0;
+
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 9;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      bottom: 0; left: 0;
+
+      background-attachment:scroll;
+      background-position:center;
+      //background: linear-gradient(204.55deg, rgba(241, 181, 27, 0.5) 0%, rgba(253, 90, 11, 0.5) 106.07%);
+      // opacity: .6;
+    }
+
+    &:hover::after{
+      // background: url(../public/icons/icon-win.svg) no-repeat right bottom, linear-gradient(204.55deg, rgba(241, 181, 27, 0.4) 0%, rgba(253, 90, 11, 0.4) 106.07%);
+      // background-size: 65%;
+      cursor: pointer;
+     // opacity: .6;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1) !important;
+      background: linear-gradient(224.57deg, #F2A446 -47.91%, #FCE9D2 -39.68%, #FFFFFF 95.77%); 
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide {
+    width: 220rem;
+    max-width: 220rem;
+    height: 333rem;
+  }
+}

@@ -1,5 +1,5 @@
 import styles from '../../styles/news.module.scss'
-import { Slider } from '../Slider'
+import { SliderNews } from '../SliderNews'
 
 export function News(){
 
@@ -10,7 +10,7 @@ export function News(){
         <div className={styles.news__name_line}></div>
       </div>
       <div className={styles.news__container} > 
-        <Slider />
+        <SliderNews />
       </div>
       <div className={styles.news__all_news}>Смотреть все новости</div>
 

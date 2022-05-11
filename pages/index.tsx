@@ -4,6 +4,9 @@ import { Greeting } from '../components/sections/Greeting'
 import { About } from '../components/sections/About'
 import { Services } from '../components/sections/Services'
 import { News } from '../components/sections/News'
+import { Consultation } from '../components/sections/Consultation'
+import { Reviews } from '../components/sections/Reviews'
+import { Contacts } from '../components/sections/Contacts'
 import styles from '../styles/Home.module.scss'
 
 
@@ -21,6 +24,9 @@ export default function Home() {
         <About />
         <Services />
         <News />
+        <Consultation />
+        <Reviews />
+        <Contacts /> 
 
       </main>
       
