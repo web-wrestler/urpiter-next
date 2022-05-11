@@ -1,6 +1,9 @@
 node_modules
 info.txt
 
+.next
+/.next
+
 /node_modules
 /.pnp
 .pnp.js

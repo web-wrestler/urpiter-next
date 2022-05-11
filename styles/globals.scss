@@ -46,7 +46,7 @@ h1 {
 //slider
 .swiper {
   // width: 1000px;
-  width: 1120rem;
+  width: 1100rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +63,7 @@ h1 {
    width: 100%;
 }
 .swiper-slide {
-  width: 190rem;
+  width: 330rem;
   border-radius: 8rem;
   margin: 0px;
   // height: 227px;
@@ -90,7 +90,7 @@ h1 {
 
 .slider_navs {
   position: absolute;
-  top: 270rem;
+  top: 240rem;
   border: none;
   width: 28rem;
   height: 49.2rem;
@@ -108,11 +108,11 @@ h1 {
 }
 
 .custom_next {
-  right: 200rem;
+  right: 320rem;
   background-image: url(../public/icons/arrow_right_slider.svg);
 }
-.custom_prev {
-  left: 210rem;
+.custom_prev {  
+  left: 290rem;
   background-image: url(../public/icons/arrow_left_slider.svg);
 }
 
@@ -137,7 +137,7 @@ h1 {
   opacity: .4;
 }
 .swiper-slide {
-  margin-right: 48rem;
+  margin-right: 40rem;
 }
 @media screen and (max-width: 768px) {
   .swiper-slide  {

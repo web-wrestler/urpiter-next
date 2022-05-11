@@ -3,7 +3,9 @@ import { Header } from '../components/sections/Header'
 import { Greeting } from '../components/sections/Greeting'
 import { About } from '../components/sections/About'
 import { Services } from '../components/sections/Services'
+import { News } from '../components/sections/News'
 import styles from '../styles/Home.module.scss'
+
 
 
 export default function Home() {
@@ -18,6 +20,7 @@ export default function Home() {
         <Greeting />
         <About />
         <Services />
+        <News />
 
       </main>
       
