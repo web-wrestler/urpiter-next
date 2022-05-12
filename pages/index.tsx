@@ -7,6 +7,8 @@ import { News } from '../components/sections/News'
 import { Consultation } from '../components/sections/Consultation'
 import { Reviews } from '../components/sections/Reviews'
 import { Contacts } from '../components/sections/Contacts'
+import { Footer } from '../components/sections/Footer'
+
 import styles from '../styles/Home.module.scss'
 
 
@@ -27,6 +29,7 @@ export default function Home() {
         <Consultation />
         <Reviews />
         <Contacts /> 
+        <Footer />
 
       </main>
       

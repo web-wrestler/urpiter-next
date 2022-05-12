@@ -1,0 +1,99 @@
+.footer {
+    height: 584rem;
+    background-color: #1B2B4B;
+    background: linear-gradient(180deg, #010101 0%, #1B2B4B 100%);
+    display: flex;
+    flex-direction: column;
+    
+  
+    &__container {
+      display: grid;
+      grid-template-rows: repeat(1, 280rem);
+      grid-template-columns: 250rem 250rem 600rem 400rem;
+      margin: 74rem 200rem 0 200rem;
+  
+      &_nav {
+        list-style: none;
+        padding: 0;
+  
+        &_item {
+          margin: 9rem 0 0 ;
+          color: #859AB5;
+          font-family: 'Inter';
+          font-weight: 500;
+          font-size: 22.3rem;
+          line-height: 140%;
+        }
+  
+        &_bottom_21{
+          margin-bottom: 21rem;
+        }
+  
+        &_link {
+          color: #fff;
+        }
+      }
+  
+      &_contacts {
+        height: 290rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+  
+        &_email {
+          color: #fff;
+          font-family: 'Inter';
+          font-weight: 600;
+          font-size: 31.5rem;
+          line-height: 65rem;
+          margin: 0;
+  
+        }
+        &_tel {
+          color: #fff;
+          font-family: 'Inter';
+          font-weight: 600;
+          font-size: 46.1rem;
+          line-height: 50rem;
+          margin: 10rem 0 0;
+        }
+
+        &_social {
+            display: flex;
+            margin: 100rem 0 0;
+
+            &_item {
+              margin: 0 0 0 21rem;
+
+              &:hover {
+                  cursor: pointer;
+              }
+            }
+        }
+      }
+    }
+  
+    &__copyright {
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 18.5rem;
+      line-height: 140%;
+      color: #C6D5EA;
+      text-align: center;
+      margin: 147rem;
+    }
+    
+  }
+
+  .text_gradient {
+    background: linear-gradient(137.49deg, #ECD821 2.26%, #FA9703 49.98%, #DA6330 94.81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+  }
+  .text_white {
+    color: #fff;
+  }
+  .text_orange {
+    color: #F2A446;
+  }
