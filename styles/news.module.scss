@@ -52,3 +52,24 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .news { 
+    height: 930rem;
+
+    &__all_news {
+      width: 416rem;
+      height: 80rem;
+      font-size: 26rem;
+  
+      margin: 62rem auto 0;
+  
+      &:hover {
+        cursor: pointer;
+        background-color: #1B2B4B;
+        color: #fff;
+      }
+    }
+
+  }
+}

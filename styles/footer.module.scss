@@ -80,9 +80,70 @@
       line-height: 140%;
       color: #C6D5EA;
       text-align: center;
-      margin: 147rem;
+      margin: 147rem 0 0;
     }
     
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer { 
+      height: 830rem;
+      background: #1B2B4B;
+
+      &__container {
+        grid-template-rows: 340rem 250rem;
+        grid-template-columns: 350rem 300rem;
+        margin: 93rem 0 0 70rem;
+
+        &_nav {
+    
+          &_item {
+            margin: 14rem 0 0 ;
+
+          }
+        }
+
+        &_contacts {
+          height: 290rem;
+          margin: 120rem 40rem 0 0;
+
+    
+          &_email {
+            font-size: 21.4rem;
+            line-height: 14rem;
+            margin: 0;
+    
+          }
+          &_tel {
+            font-size: 30rem;
+            line-height: 74rem;
+            margin: 0rem 0 0;
+          }
+
+          &_social {
+            display: flex;
+            margin: 50rem 0 0;
+  
+            &_item {
+              margin: 0 0 0 21rem;
+  
+              &:hover {
+                  cursor: pointer;
+              }
+            }
+          }
+        }
+
+      }
+
+      &__copyright {
+        font-size: 15rem;
+        color: #C6D5EA;
+        text-align: start;
+        margin: 28rem 0 0 70rem;
+      }
+    
+    }
   }
 
   .text_gradient {

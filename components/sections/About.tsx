@@ -10,7 +10,7 @@ export function About(){
         <div className={styles.about__name_line}></div>
       </div>
       <div className={styles.about__info}>
-        <h2 className={styles.about__info_title}>Юридическая компания «ЮрПитер»</h2>
+        <h2 className={styles.about__info_title}>Юридическая компания <span className={styles.about__info_title_large}>«ЮрПитер»</span></h2>
         <p className={styles.about__info_description}>Цель нашей работы защитить и отстоять ваши интересы используя наш профессиональный опыт, знания и силу команды. Все наши специалисты имеют высшее юридическое образование, опыт работы свыше десяти лет и дополнительную квалификацию в различных областях права: гражданских, административных, уголовных. Мы гарантируем вам профессиональную юридическую помощь в любой момент вашей жизни.</p>
         <ul className={styles.about__info_advantages}>
           <li className={styles.about__info_advantages_item}>

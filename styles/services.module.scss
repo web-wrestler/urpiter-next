@@ -83,8 +83,6 @@
         cursor: pointer;
         background-image: url('../public/elements/services-physical-active.png');
       }
-
-
     }
   
     &_legal {
@@ -119,6 +117,60 @@
       border-radius: 8rem;
     }
   }
+}
 
+@media screen and (max-width: 768px) {
+  .services { 
+    height: 1494rem;
+    background-image: url('../public/bg/bg-services-mobile.png');
 
+    &__name {
+      margin: 170rem auto 0;
+    }
+
+    &__title {
+      margin: 26rem 0 0;
+      font-size: 54rem;
+    }
+
+    &__container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 0rem 0 0;
+    }
+
+    &__element { 
+      margin: 50rem 0 0;
+
+      &_text {
+        background-color: #1B2B4B;
+        box-shadow: 3rem 4rem 6rem rgba(164, 94, 10, 0.2);
+        color: #fff;
+        border-radius: 8rem;
+        width: 370rem;
+        height: 80rem;
+        font-size: 26rem;
+      }
+
+      &_physical {
+        background-image: url('../public/elements/services-physical-mobile.png');
+
+        &:hover::after{
+          cursor: pointer;
+          background-image:none;
+        }
+      }
+
+      &_legal {
+        background-image: url('../public/elements/services-legal-mobile.png');
+
+        &:hover::after{
+          cursor: pointer;
+          background-image:none;
+        }
+      }
+    }
+  }
 }

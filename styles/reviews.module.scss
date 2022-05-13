@@ -31,7 +31,7 @@
 
   &__title {
     font-weight: 700;
-    font-size: 46px;
+    font-size: 46rem;
     line-height: 130%;
     margin: 32rem 0 61rem;
   }
@@ -39,5 +39,16 @@
   &__container {
     width: 100%;
     position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews { 
+    height: 924rem;
+    background-image: url('../public/bg/bg-reviews-mobile.png');
+
+    &__title {
+      margin: 36rem 0 61rem;
+    }
   }
 }

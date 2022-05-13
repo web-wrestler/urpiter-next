@@ -6,7 +6,7 @@
 }
 @media screen and (max-width: 768px) {
   .slider {
-    padding: 285rem 35rem 50rem;
+    padding: 40rem 0rem 40rem 30rem;
   }
 }
 
@@ -89,8 +89,26 @@
 
 @media screen and (max-width: 768px) {
   .slide {
-    width: 220rem;
-    max-width: 220rem;
-    height: 333rem;
+    width: 411rem;
+    max-width: 411rem;
+    min-width: 400rem;
+    height: 417rem;
+
+    &_container {
+      height: 360rem;
+
+  
+      &_date {
+        font-size: 27rem;
+      }
+  
+      &_title {
+        font-size: 20rem;
+      }
+  
+      &_text{
+        font-size: 16rem;
+      }
+    }
   }
 }

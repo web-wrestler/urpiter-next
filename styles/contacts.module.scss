@@ -53,6 +53,11 @@
           width: 24rem;
           height: 24rem;
           margin: 0 24rem 0 0;
+
+          &_large {
+            width: 28rem;
+            height: 28rem;
+          }
       }
 
       &_name {
@@ -68,6 +73,10 @@
         line-height: 34rem;
         margin: 5rem 0 0 48rem;
       }
+  }
+
+  &__caption {
+    display: none;
   }
 
   &_btn {
@@ -96,6 +105,100 @@
       filter: drop-shadow(2rem 2rem 20rem rgba(0, 0, 0, 0.25));
       border-radius: 32rem;
       overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts { 
+    height: 2092rem;
+    background-image: url('../public/bg/bg-contacts-mobile.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &__name {
+      margin: 80rem auto 0;
+    }
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+
+      &_info {
+       margin: 35rem 0 0 0;
+       width: 590rem;
+       display: flex;
+       flex-direction: column;
+      }
+    }
+
+    &__title {
+      font-size: 57rem;
+      padding-bottom: 19rem;
+    }
+
+    &__box {
+      margin: 52rem 0 0;
+
+      &_icon {
+          width: 40rem;
+          height: 40rem;
+
+          &_large {
+            width: 46rem;
+            height: 46rem;
+            margin: 0 16rem 0 -2rem;
+          }
+      }
+
+      &_name {
+        font-size: 37rem;
+        line-height: 34rem;
+      }
+
+      &_text {
+        font-size: 40rem;
+        line-height: 52rem;
+        margin: 10rem 0 0 63rem;
+      }
+    }
+
+    &_btn {
+      width: 416rem;
+      height: 80rem;
+      margin: 86rem auto 0;
+
+      font-size: 26rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #F2A446;
+      }
+    }
+
+    &__caption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 94.5rem;
+      margin: 165rem 0 0;
+      background: #fff;
+
+      font-weight: 700;
+      font-size: 33rem;
+      line-height: 160%;
+      color: #859AB5;
+      
+    }
+
+    &__map {
+      width: 100%;
+      height: 828rem;
+      margin: 0rem 0 0 0;
+      border-radius: 0;
+      filter: none;
+  }
+
 
   }
 

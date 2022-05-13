@@ -5,7 +5,9 @@
   padding: 70rem 0rem 40rem 0rem;
 }
 @media screen and (max-width: 768px) {
-
+  .slider {
+    padding: 70rem 0rem 80rem 30rem;
+  }
 }
 
 .slide {
@@ -59,3 +61,12 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+  .slide {
+    width: 387rem;
+    max-width: 387rem;
+    min-width: 400rem;
+    height: 324rem;
+
+  }
+}

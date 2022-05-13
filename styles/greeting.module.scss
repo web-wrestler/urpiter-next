@@ -1,6 +1,6 @@
 
 .greeting {
-  min-height: 807rem;
+  height: 807rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -8,6 +8,7 @@
   // background-image: url('../public/bg/bg-greeting.png');
   background-size: cover;
   background-position: 0 -80rem;
+  margin: 80rem 0 0;
   
   &__info {
     margin: 25rem 0rem 0 200rem;
@@ -15,11 +16,29 @@
     font-family: 'Inter';
 
     &_tagline {
-      font-family: 'Cormorant Unicase';
-      font-weight: 500;
-      font-size: 32rem;
-      line-height: 140%;
-      margin: 0;
+      display: flex;
+      align-items: center;
+      transform: translateX(-110rem);
+
+      &_line {
+        width: 88rem;
+        height: 1rem;
+        background: linear-gradient(270deg, #1B2B4B 0%, rgba(27, 43, 75, 0) 93.51%);
+        border-radius: 1rem;
+        margin: 0 21rem 0 0;
+
+        &_right {
+          display: none;
+        }
+      }
+
+      &_text {
+        font-family: 'Cormorant Unicase';
+        font-weight: 500;
+        font-size: 32rem;
+        line-height: 140%;
+        margin: 0;
+      }
     }
 
     &_title {
@@ -55,18 +74,31 @@
       }
 
       &_social {
-        width: 62rem;
-        height: 62rem;
-        margin: 0 21rem 0 0;
-        border-radius: 50%;
-        border: none;
-        background-size: cover;
-           
-        &:hover {
-          cursor: pointer;
+        width: 229rem;
+        height: 63rem;
+        display: flex;
+        padding: 0;
+
+        &_item {
+          margin: 0 21rem 0 0;
+        }
+
+        &_link {
+          display: block;
+          border-radius: 50%;
+          border: none;
+          background-size: cover;
+          width: 62rem;
+          height: 62rem;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         &_watsapp {
+          width: 62rem;
+          height: 62rem;
           background-image: url('../public/icons/social-watsapp.svg');
         }
         &_vk {
@@ -107,6 +139,91 @@
     width: 760rem;
     height: 603rem;
   }
+}
 
+@media screen and (max-width: 768px) {
+  .greeting { 
+    height: 957rem;
+    background-image: url('../public/bg/bg-greeting-mobile.png');
+    background-position: 0 -60rem;
+    margin: 60rem 0 0;
+    justify-content: center;
 
+    &__info { 
+      width: 600rem;
+      margin: 37rem 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &_tagline {
+        transform: translateX(0rem);
+
+        &_line {
+          border-radius: 2rem;
+          margin: 0 23rem 0 0;
+  
+          &_right {
+            display: block;
+            width: 88rem;
+            height: 1rem;
+            background: linear-gradient(270deg, #1B2B4B 0%, rgba(27, 43, 75, 0) 93.51%);
+            border-radius: 2rem;
+            margin: 0 0 0 23rem;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+          }
+        }
+      }
+
+      &_title {
+        margin: 47rem 0 0;
+      }
+
+      &_subtitle {
+        font-size: 25rem;
+        margin: 13rem 0 0;
+      }
+
+      &_text {
+        font-weight: 400;
+        font-size: 35rem;
+        line-height: 140%;
+        margin: 45rem 0 0;
+      }    
+      
+      &_contact { 
+      flex-direction: column;
+      align-items: center;
+
+        &_tel {
+          font-size: 96rem;
+          margin: 0;
+        }
+  
+        &_social {
+          margin: 250rem 0 0;
+          width: 330rem;
+  
+          &_link {
+            width: 95rem;
+            height: 95rem;
+  
+          }
+        }
+      }
+
+      &_consultation {
+        width: 417rem;
+        height: 80rem;
+        font-size: 26rem;
+        transform: translateY(-290rem);
+  
+      }
+    }
+
+    &__image {
+      display: none;
+    }
+
+  }
 }

@@ -12,6 +12,7 @@ export function Consultation(){
         <h2 className={styles.consultation__title}>Запишитесь на консультацию</h2>
         <p className={styles.consultation__description}>Оставьте заявку, чтобы наши специалисты связались с Вами и ответили на все интересующие Вас вопросы.</p>
         <div className={styles.consultation__checkbox}>
+          <span className={styles.consultation__checkbox_line}></span>
           <input className={styles.consultation__checkbox_input} type="checkbox" id="onlyPhone" name="onlyPhone" />
           <label className={styles.consultation__checkbox_label} htmlFor="onlyPhone">Оставить только телефон</label>
         </div>

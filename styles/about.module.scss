@@ -21,7 +21,7 @@
           font-family: 'Cormorant Unicase';
           font-style: normal;
           font-weight: 500;
-          font-size: 22px;
+          font-size: 22rem;
           line-height: 140%;
           margin: 0 0 8rem;
         }
@@ -87,5 +87,52 @@
         right: 166rem;
         top: 148rem;
     }
+}
 
+@media screen and (max-width: 768px) {
+  .about { 
+    height: 1780rem;
+    background-image: url('../public/bg/bg-about-mobile.png');
+    align-items: center;
+
+    &__name {
+      margin: 614rem auto 0;
+    }
+
+    &__info {
+      width: 592rem;
+      margin: 29rem 64rem 0;
+      padding: 0;
+
+      &_title {
+        margin: 0;
+        font-size: 48rem;
+        text-align: center;
+
+        &_large {
+          font-size: 97.5rem;
+          line-height: 130%;
+        }
+      }
+
+      &_description {
+        margin: 55rem 0 0;
+        font-size: 28rem;
+      }
+
+      &_advantages {
+        margin: 72rem 0 0;
+
+        &_text {
+          font-size: 15rem;
+          margin: 15rem 0 0;
+        }
+      }
+    }
+    
+    &__planet {
+      right: 69rem;
+      top: -20rem;
+    }
+  }
 }
