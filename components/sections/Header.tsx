@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Navigation } from "../Navigation";
 import styles from '../../styles/header.module.scss'
 
-export function Header(){
+export function Header({onOpenPopup}){
 
   return (
     <section className={styles.header}>
@@ -15,10 +15,10 @@ export function Header(){
       </div>
       <div className={styles.header_btn_container}>
         <div className={`${styles.header_btn} ${styles.header_btn_phone}`}>Телефон</div>
-        <div className={`${styles.header_btn} ${styles.header_btn_profile}`}>Личный кабинет</div>
+        <div className={`${styles.header_btn} ${styles.header_btn_profile}`} onClick={() => onOpenPopup()}>Личный кабинет</div>
       </div>
       <div className={styles.header_mobile}>
-        <div className={styles.header_mobile_profile} >{/* onClick={() => handleOpenPopup('profile')} */}
+        <div className={styles.header_mobile_profile} onClick={() => onOpenPopup()}>
           <Image loader={() => "/icons/icon-person-dark.svg?w=35"} src={"/icons/icon-person-dark.svg"} width={35} height={35} alt="профаил" unoptimized  />
         </div>
         <button className={styles.header_mobile_menu} >{/* onClick={toggleMobileMenu} */}

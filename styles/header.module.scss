@@ -1,20 +1,22 @@
 
 .header {
   height: 80rem;
-  width: 100%;
+  width: 1920rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid #D8D8D8;
   padding: 0 200rem;
   background-image: url('../public/bg/bg-greeting.png');
-  background-size: cover;
+  // background-size: cover;
+  background-size: 1900rem;
   position: fixed;
   transform: translateY(-80rem);
   z-index: 2;
   
   &_logo {
     min-width: 257rem;
+    max-width: 257rem;
     margin: 0 220rem 0 0rem;
   }
 
@@ -66,6 +68,7 @@
 
 @media screen and (max-width: 768px) {
   .header {
+    width: 100%;
     height: 61rem;
     background: #fff;
     padding: 0 22rem;

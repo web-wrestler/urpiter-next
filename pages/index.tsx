@@ -1,3 +1,5 @@
+
+import { useState } from 'react';
 import { MainLayout } from '../components/MainLayout'
 import { Header } from '../components/sections/Header'
 import { Greeting } from '../components/sections/Greeting'
@@ -8,12 +10,21 @@ import { Consultation } from '../components/sections/Consultation'
 import { Reviews } from '../components/sections/Reviews'
 import { Contacts } from '../components/sections/Contacts'
 import { Footer } from '../components/sections/Footer'
-
+import { Popup } from '../components/Popup';
 import styles from '../styles/Home.module.scss'
 
 
-
 export default function Home() {
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
+
+  const handleOpenPopup = () => {
+    console.log('OpenPopup')
+    setIsOpenPopup(true);
+  }
+
+  const closeAll = () => {
+    setIsOpenPopup(false);
+  } 
 
   return (
     <MainLayout 
@@ -21,7 +32,7 @@ export default function Home() {
       description={'Юридическая помощь'}
     >
       <main className={styles.main}>
-        <Header />
+        <Header onOpenPopup={handleOpenPopup}/>
         <Greeting />
         <About />
         <Services />
@@ -30,6 +41,7 @@ export default function Home() {
         <Reviews />
         <Contacts /> 
         <Footer />
+        <Popup isOpenPopup={isOpenPopup} onClose={closeAll} />
 
       </main>
       

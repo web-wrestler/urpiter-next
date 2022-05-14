@@ -1,0 +1,145 @@
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rem;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  // background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(27, 43, 75, 0.8);
+  backdrop-filter: blur(5rem);
+  z-index: 2;
+  transition: opacity 0.5s, visibility 0.5s ease;
+  color: #071737;
+
+  &_opened {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s ease;
+    -moz-transition: opacity 0.5s;
+  }
+
+  &__container {
+    margin: 0;
+    padding: 0rem 50rem 0;
+    width: 621rem;
+    min-height: 422rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-radius: 8rem;
+    position: relative;
+    max-height: 90vh;
+
+    opacity: 1;
+    transition: opacity 1s, visibility 0.5s ease;
+
+    &_img{
+      justify-content: flex-start;
+      overflow: auto;
+    }
+  }
+
+
+  &__button_close {
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    top: 15rem;
+    right: 15rem;
+    opacity: .6;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+
+  }
+
+  &__email {
+    font-weight: 400;
+    font-size: 30.6rem;
+    line-height: 63rem;
+    margin: 20rem 0 0;
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 48rem;
+    line-height: 78rem;
+    margin: 0rem 0 0;
+  }
+
+  &__time {
+    font-weight: 500;
+    font-size: 18rem;
+    line-height: 140%;
+    margin: 0;
+  }
+
+  &__form {
+    margin: 27rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 318rem;
+
+    &_input {
+      width: 100%;
+      height: 58rem;
+      border: 1px solid #C9D5E8;
+      box-shadow: inset 0 0 34rem #F2F2F2;
+      border-radius: 8rem;
+      padding-left: 16rem; 
+      padding-top: 0rem;
+      margin: 0 22rem 0 0 ;
+
+      font-weight: 500;
+      font-size: 17rem;
+      line-height: 140%;
+      color: #071737;
+
+      &::placeholder {
+        color: #859AB5;
+      }
+    }
+
+    &_button {
+      width: 100%;
+      height: 58rem;
+      background: #071737;
+      border-radius: 8rem; 
+      border: none;
+      font-weight: 600;
+      font-size: 17rem;
+      line-height: 140%;
+      color: #fff;
+      margin: 23rem 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    align-items: flex-start;
+
+    &__container {
+      margin: 300rem 60rem 0;
+      padding: 30rem 70rem 15rem;
+      min-height: 100rem;
+
+      &_img{
+        margin: 30rem 60rem 0;
+        padding: 25rem 25rem;
+      }
+    }
+  }
+}
