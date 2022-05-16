@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from '../../styles/greeting.module.scss'
 
-export function Greeting(){
+export function Greeting({onOpenPopup}){
 
   return (
     <section className={styles.greeting}>
@@ -31,7 +31,7 @@ export function Greeting(){
           <button className={`${styles.greeting__info_contact_social} ${styles.greeting__info_contact_social_vk}`}></button>
           <button className={`${styles.greeting__info_contact_social} ${styles.greeting__info_contact_social_telegram}`}></button> */}
         </div>
-        <div className={styles.greeting__info_consultation}>Консультация специалиста</div>
+        <div className={styles.greeting__info_consultation} onClick={() => onOpenPopup()}>Консультация специалиста</div>
       </div>
 
       <div className={styles.greeting__image}>

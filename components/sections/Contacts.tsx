@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from '../../styles/contacts.module.scss'
 
-export function Contacts(){
+export function Contacts({onOpenPopup}){
 
   return (
     <section className={styles.contacts}>
@@ -35,7 +35,7 @@ export function Contacts(){
             <h3 className={styles.contacts__box_name}>E-MAIL</h3>
           </div>
           <p className={styles.contacts__box_text}>zadelo@gmail.com</p>
-          <button className={styles.contacts_btn}>Заказать звонок</button>
+          <button className={styles.contacts_btn} onClick={() => onOpenPopup()}>Заказать звонок</button>
         </div>
 
         <div className={styles.contacts__caption}>Офис на карте</div>

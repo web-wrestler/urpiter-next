@@ -11,19 +11,25 @@ import { Reviews } from '../components/sections/Reviews'
 import { Contacts } from '../components/sections/Contacts'
 import { Footer } from '../components/sections/Footer'
 import { Popup } from '../components/Popup';
+import { MobileMenu } from '../components/MobileMenu';
 import styles from '../styles/Home.module.scss'
+
 
 
 export default function Home() {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
+  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
   const handleOpenPopup = () => {
-    console.log('OpenPopup')
     setIsOpenPopup(true);
   }
+  const toggleMobileMenu = () => {
+    isOpenMobileMenu ? setIsOpenMobileMenu(false) : setIsOpenMobileMenu(true);
+  }
 
-  const closeAll = () => {
+  const closeAllModals = () => {
     setIsOpenPopup(false);
+    setIsOpenMobileMenu(false);
   } 
 
   return (
@@ -32,16 +38,19 @@ export default function Home() {
       description={'Юридическая помощь'}
     >
       <main className={styles.main}>
-        <Header onOpenPopup={handleOpenPopup}/>
-        <Greeting />
+        <Header toggleMobileMenu={toggleMobileMenu} onClose={closeAllModals} />
+        <Greeting onOpenPopup={handleOpenPopup} />
         <About />
         <Services />
         <News />
         <Consultation />
         <Reviews />
-        <Contacts /> 
+        <Contacts onOpenPopup={handleOpenPopup} /> 
         <Footer />
-        <Popup isOpenPopup={isOpenPopup} onClose={closeAll} />
+        <Popup isOpenPopup={isOpenPopup} onClose={closeAllModals} />
+        {
+          isOpenMobileMenu && <MobileMenu onClose={closeAllModals} />
+        }
 
       </main>
       

@@ -8,8 +8,8 @@ export function MobileMenu({ onClose }){
     <RemoveScroll>
       <div className={styles.mobile_menu}>
         <div className={styles.mobile_menu__container}>
-          <h3 className={styles.mobile_menu__email}>advokat-lex05@mail.ru</h3>
-          <h2 className={styles.mobile_menu__phone}>8 800 301 6650</h2>
+          <h3 className={styles.mobile_menu__email}>zadelo@gmail.com</h3>
+          <h2 className={styles.mobile_menu__phone}>8 800 571 70 90</h2>
           <Navigation active='main' onClose={onClose} />
           <form className={styles.mobile_menu__form}>
             <input className={styles.mobile_menu__form_input} type="tel" name="phone" placeholder="Телефон" required />

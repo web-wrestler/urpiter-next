@@ -69,7 +69,7 @@ export function Footer(){
           </ul> 
           
           <div className={styles.footer__container_contacts}>
-            <p className={styles.footer__container_contacts_email}>JurPiter@mail.ru</p>
+            <p className={styles.footer__container_contacts_email}>zadelo@gmail.com</p>
             <p className={styles.footer__container_contacts_tel}>8 800 301 6650</p>
             <ul className={styles.footer__container_contacts_social}>
               <li className={styles.footer__container_contacts_social_item}>
