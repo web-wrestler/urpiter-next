@@ -11,7 +11,7 @@ export function Contacts({onOpenPopup}){
       </div>
       <div className={styles.contacts__container}>
         <div className={styles.contacts__container_info}>
-          <h2 className={styles.contacts__title}>Наш офис в Санкт-Петербурге</h2>
+          <h2 className={styles.contacts__title}>Наш офис <span className={styles.contacts__title_mobile}><br/></span>в Санкт-Петербурге</h2>
           <div className={styles.contacts__box}>
             <div className={styles.contacts__box_icon}>
               <Image loader={() => "/icons/icon-address-dark.svg?w=24"} src={"/icons/icon-address-dark.svg"} width="100%" height="100%" alt="адрес" />
