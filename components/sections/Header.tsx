@@ -25,7 +25,7 @@ export function Header({toggleMobileMenu, onClose}){
         <Navigation active='main' onClose={onClose}/>
       </div>
       <div className={styles.header_btn_container}>
-        <div className={`${styles.header_btn} ${styles.header_btn_phone}`}>Телефон</div>
+        <a href='tel:+78005717090' className={`${styles.header_btn} ${styles.header_btn_phone}`}>Телефон</a>
         <div className={`${styles.header_btn} ${styles.header_btn_profile}`}>Личный кабинет</div>
       </div>
       <div className={styles.header_mobile}>

@@ -9,6 +9,10 @@
     // box-shadow: inset 0px 7rem 100rem rgba(255, 255, 255, 0.25);
     color: #fff;
 
+    &_short {
+      background-image: url('../public/bg/bg-consultation-short.png');
+      background-size: contain;
+    }
 
     &__name {
         margin: 80rem auto 0;
@@ -126,6 +130,7 @@
             width: 900rem;
             display: flex;
             align-items: center;
+            margin: 37rem 0 104rem;
           }
 
           &_container {

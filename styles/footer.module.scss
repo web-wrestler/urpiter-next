@@ -1,7 +1,7 @@
 .footer {
     height: 584rem;
     background-color: #1B2B4B;
-    background: linear-gradient(180deg, #010101 0%, #1B2B4B 100%);
+    // background: linear-gradient(180deg, #010101 0%, #1B2B4B 100%);
     display: flex;
     flex-direction: column;
     
@@ -64,9 +64,11 @@
 
             &_item {
               margin: 0 0 0 21rem;
+              transition: 0.2s ease;
 
               &:hover {
                   cursor: pointer;
+                  transform: scale(1.1);
               }
             }
         }
@@ -87,7 +89,7 @@
 
   @media screen and (max-width: 768px) {
     .footer { 
-      height: 844rem;
+      height: 810rem;
       background: #1B2B4B;
 
       &__container {
@@ -104,7 +106,7 @@
         }
 
         &_contacts {
-          height: 290rem;
+          height: 250rem;
           margin: 120rem 40rem 0 0;
 
     
@@ -128,7 +130,7 @@
               margin: 0 0 0 21rem;
   
               &:hover {
-                  cursor: pointer;
+                cursor: pointer;
               }
             }
           }
@@ -140,7 +142,7 @@
         font-size: 15rem;
         color: #C6D5EA;
         text-align: start;
-        margin: 60rem 0 0 70rem;
+        margin: 40rem 0 0 70rem;
       }
     
     }

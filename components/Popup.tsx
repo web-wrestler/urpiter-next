@@ -16,7 +16,7 @@ export function Popup({ isOpenPopup, onClose }){
             <p className={styles.popup__email}>zadelo@gmail.com</p>
             <h3 className={styles.popup__phone}>8 800 301 6650</h3>
             <p className={styles.popup__time}>Пн - Пт: с 10 до 19</p>
-            <p className={styles.popup__time}>Пн - Пт: с 10 до 19</p>
+            <p className={styles.popup__time}>Суб - Вс: с 12 до 20</p>
           
             <form className={styles.popup__form}>
               <input className={styles.popup__form_input} type="tel" name="phone" placeholder="Телефон" required />

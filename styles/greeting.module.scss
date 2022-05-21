@@ -91,9 +91,11 @@
           background-size: cover;
           width: 62rem;
           height: 62rem;
+          transition: 0.2s ease;
 
           &:hover {
             cursor: pointer;
+            transform: scale(1.1);
           }
         }
 
@@ -128,9 +130,20 @@
 
       &:hover {
         cursor: pointer;
-        background-color: #1B2B4B;
-        color: #fff;
+        // background-color: #1B2B4B;
       }
+
+      &_call {
+        margin: 20rem 0 0;
+        background-color: #1B2B4B;
+        box-shadow: none;
+
+        &:hover {
+          // background-color: #F2A446;
+        }
+      }
+
+
 
     }
   }
@@ -159,6 +172,8 @@
 
       &_tagline {
         transform: translateX(0rem);
+        width: 100%;
+        justify-content: space-between;
 
         &_line {
           border-radius: 2rem;
@@ -173,6 +188,10 @@
             margin: 0 0 0 23rem;
             transform: matrix(-1, 0, 0, 1, 0, 0);
           }
+        }
+
+        &_text {
+          font-size: 30rem;
         }
       }
 
@@ -202,7 +221,7 @@
         }
   
         &_social {
-          margin: 250rem 0 0;
+          margin: 275rem 0 0;
           width: 330rem;
   
           &_link {
@@ -217,7 +236,7 @@
         width: 417rem;
         height: 80rem;
         font-size: 26rem;
-        transform: translateY(-290rem);
+        transform: translateY(-350rem);
   
       }
     }
@@ -225,6 +244,12 @@
     &__image {
       display: none;
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .greeting {
+    padding: 60rem 0 0;
 
   }
 }

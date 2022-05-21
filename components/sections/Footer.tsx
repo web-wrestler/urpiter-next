@@ -42,7 +42,7 @@ export function Footer(){
               Услуги
             </li>
             <li className={styles.footer__container_nav_item}>
-              <a href="#about" className={styles.footer__container_nav_link} >
+              <a href="#services" className={styles.footer__container_nav_link} >
                 Для физ лиц
               </a>
             </li>
@@ -72,8 +72,13 @@ export function Footer(){
             <p className={styles.footer__container_contacts_email}>zadelo@gmail.com</p>
             <p className={styles.footer__container_contacts_tel}>8 800 301 6650</p>
             <ul className={styles.footer__container_contacts_social}>
-              <li className={styles.footer__container_contacts_social_item}>
+            <li className={styles.footer__container_contacts_social_item}>
                 <a href="#" className={`${styles.footer__container_contacts_social_link} `}>
+                  <Image loader={() => "/icons/social-watsapp-white.svg?w=61"} src={"/icons/social-watsapp-white.svg"} width={61} height={61} alt="инстаграм" />
+                </a>
+              </li>
+              <li className={styles.footer__container_contacts_social_item}>
+                <a href="https://t.me/UrPiter" className={`${styles.footer__container_contacts_social_link}`} target="_blank">
                   <Image loader={() => "/icons/social-telegram-white.svg?w=61"} src={"/icons/social-telegram-white.svg"} width={61} height={61} alt="инстаграм" />
                 </a>
               </li>

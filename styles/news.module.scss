@@ -2,13 +2,16 @@
   height: 785rem;
   background-image: url('../public/bg/bg-news.png');
   background-size: cover;
+  margin: 0 0 20rem;
   // position: relative;
 
   &__name {
-    margin: 117rem auto 0;
+    //margin: 117rem auto 0;
+    padding: 100rem 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     
     &_text {
       font-family: 'Cormorant Unicase';
@@ -56,6 +59,7 @@
 @media screen and (max-width: 768px) {
   .news { 
     height: 930rem;
+    margin: 0;
 
     &__all_news {
       width: 416rem;

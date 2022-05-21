@@ -18,7 +18,7 @@
   &_scroll {
     backdrop-filter: blur(4rem);
     background-image: none;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   
   &_logo {
@@ -125,6 +125,31 @@
         &:hover {
           cursor: pointer;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    height: 120rem;
+    padding: 0 40rem;
+
+    &_logo {
+      min-width: 275rem;
+      width: 275rem;
+    }
+
+    &_mobile {
+      width: 130rem;
+
+      &_profile {
+        width: 50rem;
+        height: 50rem;
+      }
+      &_menu {
+        width: 50rem;
+        height: 50rem;
       }
     }
   }

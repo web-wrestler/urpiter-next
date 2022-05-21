@@ -1803,7 +1803,7 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^15.3.0 || ^16.0.0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@17.0.2":
+"react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^15.3.0 || ^16.0.0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.0.0", "react-dom@17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -1889,7 +1889,15 @@
     "invariant" "^2.2.4"
     "tslib" "^1.0.0"
 
-"react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^15.3.0 || ^16.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.0.0 <= 17.x.x", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=16", "react@17.0.2":
+"react-tooltip@^4.2.21":
+  "integrity" "sha512-zSLprMymBDowknr0KVDiJ05IjZn9mQhhg4PRsqln0OZtURAJ1snt1xi5daZfagsh6vfsziZrc9pErPTDY1ACig=="
+  "resolved" "https://registry.npmjs.org/react-tooltip/-/react-tooltip-4.2.21.tgz"
+  "version" "4.2.21"
+  dependencies:
+    "prop-types" "^15.7.2"
+    "uuid" "^7.0.3"
+
+"react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^15.3.0 || ^16.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.0.0 <= 17.x.x", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=16", "react@>=16.0.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -2321,6 +2329,11 @@
   "version" "1.5.1"
   dependencies:
     "object-assign" "^4.1.1"
+
+"uuid@^7.0.3":
+  "integrity" "sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-7.0.3.tgz"
+  "version" "7.0.3"
 
 "uvu@^0.5.0":
   "integrity" "sha512-brFwqA3FXzilmtnIyJ+CxdkInkY/i4ErvP7uV0DnUVxQcQ55reuHphorpF+tZoVHK2MniZ/VJzI7zJQoc9T9Yw=="
