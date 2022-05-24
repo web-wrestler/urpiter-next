@@ -130,20 +130,33 @@
 
       &:hover {
         cursor: pointer;
-        // background-color: #1B2B4B;
+        background-color: #1B2B4B;
       }
 
       &_call {
-        margin: 20rem 0 0;
-        background-color: #1B2B4B;
+        margin: 30rem 0 0;
+        background-color: transparent;
+        color: #1B2B4B;
+        border: 3px solid #1B2B4B;
         box-shadow: none;
 
         &:hover {
-          // background-color: #F2A446;
+          background-color: #1B2B4B;
+          color: #fff;
         }
       }
 
+      &_icon {
+        width: 33rem;
+        height: 33rem;
+        background-image: url('../public/icons/phone-dark.svg');
+        background-size: cover;
+        margin: 0 8rem 0 0;
+      }
 
+      &:hover &_icon {
+        background-image: url('../public/icons/phone-white.svg');
+      }
 
     }
   }
@@ -237,6 +250,7 @@
         height: 80rem;
         font-size: 26rem;
         transform: translateY(-350rem);
+        border-radius: 6rem;
   
       }
     }
@@ -250,6 +264,34 @@
 @media screen and (max-width: 450px) {
   .greeting {
     padding: 60rem 0 0;
+
+    &__info { 
+      margin: 40rem 0 0;
+
+      &_tagline {
+        width: 120%;
+
+        &_text {
+          font-size: 36rem;
+        }
+      }
+
+      &_contact { 
+
+        &_social {
+          margin: 300rem 0 0;
+          height: 24rem;
+        }
+      }
+
+      &_consultation {
+        width: 100%;
+        height: 100rem;
+        font-size: 34rem;
+        border-radius: 12rem;
+  
+      }
+    }
 
   }
 }

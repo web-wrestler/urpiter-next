@@ -148,6 +148,45 @@
     }
   }
 
+  @media screen and (max-width: 450px) {
+    .footer { 
+      height: 860rem;
+
+      &__container {
+        grid-template-rows: 370rem 255rem;
+        grid-template-columns: 342rem 300rem;
+
+        &_nav {
+          &_item {
+            font-size: 26rem;
+          }
+        }
+
+        &_contacts {
+          height: 250rem;
+          margin: 120rem 40rem 0 0;
+
+          &_email {
+            font-size: 27rem;
+    
+          }
+          &_tel {
+            font-size: 32rem;
+            margin: 10rem 0 0;
+          }
+
+          &_social {
+            margin: 60rem 0 0;
+          }
+        }
+      }
+
+      &__copyright {
+        font-size: 20rem;
+      }
+    }
+  }
+
   .text_gradient {
     background: linear-gradient(137.49deg, #ECD821 2.26%, #FA9703 49.98%, #DA6330 94.81%);
     -webkit-background-clip: text;

@@ -262,7 +262,6 @@
       &_short {
         display: block;
         width: 100%;
-            
       }
  
       &_container {
@@ -310,7 +309,31 @@
           }
       }
     }
-
   }
 }
 
+@media screen and (max-width: 450px) {
+  .consultation { 
+
+    &__form {
+
+      &_container {
+        height: 360rem;
+      }
+
+      &_input {
+        height: 100rem;
+      }
+
+      &_textarea {
+        margin: 35rem 0 0;
+      }
+
+      &_btn {
+        border-radius: 14rem;
+        font-size: 32rem;
+      }
+
+    }
+  }
+}

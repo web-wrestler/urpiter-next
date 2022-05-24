@@ -144,3 +144,37 @@
     }
   }
 }
+
+@media screen and (max-width: 450px) {
+  .popup {
+
+    &__container {
+      padding: 30rem 70rem 30rem;
+    }
+
+    &__phone {
+      line-height: 90rem;
+    }
+
+    &__time {
+      font-size: 22rem;
+    }
+
+    &__form {
+      margin: 35rem 0 0 0;
+      width: 420rem;
+  
+      &_input {
+        height: 82rem;
+        border-radius: 12rem;
+        font-size: 26rem;
+      }
+
+      &_button {
+        height: 82rem;
+        border-radius: 12rem; 
+        font-size: 26rem;
+      }
+    }
+  }
+}

@@ -29,12 +29,12 @@ export function Greeting({onOpenPopup}){
               <a href='https://t.me/UrPiter' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_telegram}`} target="_blank"></a>
             </li>
           </ul>
-          {/* <button className={`${styles.greeting__info_contact_social} ${styles.greeting__info_contact_social_watsapp}`}></button>
-          <button className={`${styles.greeting__info_contact_social} ${styles.greeting__info_contact_social_vk}`}></button>
-          <button className={`${styles.greeting__info_contact_social} ${styles.greeting__info_contact_social_telegram}`}></button> */}
         </div>
         <a href='#consultation' className={styles.greeting__info_consultation} >Консультация специалиста</a>
-        <div className={`${styles.greeting__info_consultation} ${styles.greeting__info_consultation_call}`} onClick={() => onOpenPopup()}>Заказать звонок</div>
+        <div className={`${styles.greeting__info_consultation} ${styles.greeting__info_consultation_call}`} onClick={() => onOpenPopup()}>
+          <div className={styles.greeting__info_consultation_icon}></div>
+          Заказать звонок
+        </div>
       </div>
 
       <div className={styles.greeting__image}>

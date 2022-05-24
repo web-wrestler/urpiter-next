@@ -37,7 +37,7 @@ export function Consultation(){
             <button className={`${styles.consultation__form_btn} ${styles.consultation__form_btn_short}`} type="submit">Оставить заявку</button>
           </form>
           ) : (
-            <form className={styles.consultation__form}>
+          <form className={styles.consultation__form}>
             <div className={styles.consultation__form_container}>
               <input className={styles.consultation__form_input} type="text" name="name" placeholder="Имя"/>
               <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта"/>
