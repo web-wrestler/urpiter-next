@@ -1,8 +1,18 @@
+import { useEffect, useState } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { SliderNews } from '../SliderNews';
+import { mockNews } from '../../mocks/mocks'
 import styles from '../../styles/news.module.scss';
 
-export function News(){
+export function News({ news: currentNews }){
+  const [news, setNews] = useState(currentNews);
+
+  useEffect(() => {
+    console.log('currentNews', currentNews)
+    if(!currentNews){
+      setNews(mockNews.map(item => item))
+    }
+  }, []);
 
   return (
     <ScrollableAnchor id={'news'}>
@@ -12,7 +22,7 @@ export function News(){
           <div className={styles.news__name_line}></div>
         </div>
         <div className={styles.news__container} > 
-          <SliderNews />
+          {news && <SliderNews news={news} />}
         </div>
         <div className={styles.news__all_news}>Смотреть все новости</div>
       </section>

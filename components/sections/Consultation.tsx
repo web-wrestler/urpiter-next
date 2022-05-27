@@ -32,7 +32,7 @@ export function Consultation(){
           { shortForm ? (
           <form className={`${styles.consultation__form} ${styles.consultation__form_short}`}>
             <div className={`${styles.consultation__form} ${styles.consultation__form_container_short}`}>
-              <input className={`${styles.consultation__form_input} ${styles.consultation__form_input_short}`} type="tel" name="phone" placeholder="Телефон"/>
+              <input className={`${styles.consultation__form_input} ${styles.consultation__form_input_short}`} type="tel" name="phone" placeholder="Телефон" required/>
             </div>
             <button className={`${styles.consultation__form_btn} ${styles.consultation__form_btn_short}`} type="submit">Оставить заявку</button>
           </form>
@@ -40,10 +40,10 @@ export function Consultation(){
           <form className={styles.consultation__form}>
             <div className={styles.consultation__form_container}>
               <input className={styles.consultation__form_input} type="text" name="name" placeholder="Имя"/>
-              <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта"/>
+              <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта" required/>
               <input className={styles.consultation__form_input} type="tel" name="phone" placeholder="Телефон"/>
             </div>
-            <textarea className={styles.consultation__form_textarea}  name="comment" placeholder="Опишите вашу проблему" />
+            <textarea className={styles.consultation__form_textarea}  name="comment" placeholder="Опишите вашу проблему" required />
             <button className={styles.consultation__form_btn} type="submit">Записаться на консультацию</button>
           </form>
           )}

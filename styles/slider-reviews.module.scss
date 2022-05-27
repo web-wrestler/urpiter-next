@@ -30,7 +30,10 @@
       top: -64rem;
       border-radius: 50%;
       border: 4rem solid #F2A446;
-      background-color: #1B2B4B;
+      // background-color: #1B2B4B;
+      background-image: url('../public/avatars/person.jpg');
+      background-size: cover;
+      background-position: -1rem -1rem;
       overflow: hidden;
     }
 
@@ -67,6 +70,10 @@
     max-width: 387rem;
     min-width: 400rem;
     height: 324rem;
+
+    &_avatar {
+      background-position: 0rem 0rem;
+    }
 
   }
 }

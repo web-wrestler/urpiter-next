@@ -9,16 +9,13 @@ import 'swiper/css/scrollbar';
 import styles from '../styles/slider-reviews.module.scss'
 
 
-export function SliderReviews() {
-  const wonCases = [
-    {id: 0, avatar: 'BKBq.jpeg', name: 'Вася', text: 'На сегодняшний день образование СНТ или "Садоводство" представляют из себя государство в государстве. Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя, пресечь которые'},
-    {id: 1, avatar: '99f6.jpg', name: 'Мария', text: 'Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя, пресечь которые'},
-    {id: 2, avatar: '32425.jpg', name: 'Петр', text: 'Поэтому зачастую садоводы сталкиваются с самоуправными действиями. На сегодняшний день образование СНТ или "Садоводство" представляют из себя государство в государстве. Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями'},
-    {id: 3, avatar: 'b5e0.jpg', name: 'Джон', text: 'На сегодняшний день образование СНТ или "Садоводство" представляют из себя государство в государстве. Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя, пресечь которые...'},
-    {id: 4, avatar: 'BKBq.jpeg', name: 'Гоша', text: 'На сегодняшний день образование СНТ или "Садоводство" представляют из себя государство в государстве. Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя, пресечь которые...'},
-    {id: 5, avatar: '99f6.jpg', name: 'Вася', text: 'На сегодняшний день образование СНТ или "Садоводство" представляют из себя государство в государстве. Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя, пресечь которые...'},
-    {id: 6, avatar: '32425.jpg', name: 'Джон', text: 'На сегодняшний день образование СНТ или "Садоводство" представляют из себя государство в государстве. Так как над садоводством нет никакого контролирующего ведомства в лице государства. Поэтому зачастую садоводы сталкиваются с самоуправными действиями председателя, пресечь которые...'},
-  ]
+export function SliderReviews({ reviews }) {
+  // console.log('reviews', reviews) 
+
+  let src = process.env.API_URL_LOCAL || 'http://194.67.119.197:1337';
+  if(reviews[0].attributes.avatar.data && reviews[0].attributes.avatar.data.attributes.url.includes('/avatars/')){
+    src = '' 
+  }
  
   return (
   <>
@@ -48,16 +45,19 @@ export function SliderReviews() {
       },
     }}
     >
-      {wonCases.map(item => {
-      return (  
-        <SwiperSlide className={styles.slide} key={item.id}>
-            <div className={styles.slide_avatar}> 
-              <Image loader={() => `/avatars/${item.avatar}?w=120`} src={`/avatars/${item.avatar}`} width={120} height={120}  alt='' />
-            </div>
-            <p className={styles.slide_name}>{item.name}</p>
-            <p className={styles.slide_text}>{item.text}</p>
-        </SwiperSlide>
-       )})}
+        {reviews.map(item => {
+          if(item.attributes.slider){
+            return (  
+              <SwiperSlide className={styles.slide} key={item.id}>
+                  <div className={styles.slide_avatar}> 
+                  {
+                    item.attributes.avatar.data && <Image loader={() => `${src + item.attributes.avatar.data.attributes.url}?w=120`} src={`${src + item.attributes.avatar.data.attributes.url}`} width={120} height={120}  alt='' />        
+                  }
+                  </div>
+                  <p className={styles.slide_name}>{item.attributes.name}</p>
+                  <p className={styles.slide_text}>{item.attributes.text}</p>
+              </SwiperSlide>
+            )}})}
       
     </Swiper> 
   </>

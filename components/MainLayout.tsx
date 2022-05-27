@@ -12,11 +12,10 @@ export function MainLayout({
     <>
       <Head>
         <title>{ title }</title>
-        <meta name="keywords" content="Адвокат-LEX, юристы" />
+        <meta name="keywords" content="ЮрПитер, юристы, адвокаты, юридическая помощь, консультация" />
         <meta name="description" content={ description } />
         <meta charSet="utf-8" />
-
-      </Head>
+      </Head> 
       
       <main>
         {children}
