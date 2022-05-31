@@ -8,9 +8,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import styles from '../styles/slider-news.module.scss'
+import { NewsModel } from "../interfaces/news";
 
+interface NewsProps {
+  news: NewsModel[]
+}
 
-export function SliderNews({ news }) {
+export function SliderNews({ news }: NewsProps) {
   // console.log('news', news) 
   return (
   <>

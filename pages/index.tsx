@@ -12,8 +12,12 @@ import { Contacts } from '../components/sections/Contacts'
 import { Footer } from '../components/sections/Footer'
 import { Popup } from '../components/Popup';
 import { MobileMenu } from '../components/MobileMenu';
+import { ButtonCall } from '../components/ButtonCall';
 
+import { NewsModel } from '../interfaces/news';
 import styles from '../styles/Home.module.scss'
+
+
 
 export default function Home({ news, reviews }) {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
@@ -46,6 +50,7 @@ export default function Home({ news, reviews }) {
         <Reviews reviews={reviews} />
         <Contacts onOpenPopup={handleOpenPopup} /> 
         <Footer />
+        <ButtonCall />
         <Popup isOpenPopup={isOpenPopup} onClose={closeAllModals} />
         {
           isOpenMobileMenu && <MobileMenu onClose={closeAllModals} />
@@ -58,12 +63,11 @@ export default function Home({ news, reviews }) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  console.log('process.env.NEXT_PUBLIC_API_URL', process.env.NEXT_PUBLIC_API_URL)
   if(!process.env.NEXT_PUBLIC_API_URL){
     return {props: {news: null, reviews: null}}
   }
 
-  const news = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/all-news?populate=*`)
+  const news: NewsModel[] = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/all-news?populate=*`)
   .then(res => {
     return res.json();
   })

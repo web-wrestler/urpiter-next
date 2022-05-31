@@ -147,17 +147,16 @@
       }
 
       &_icon {
-        width: 33rem;
-        height: 33rem;
-        background-image: url('../public/icons/phone-dark.svg');
+        width: 34rem;
+        height: 34rem;
+        background-image: url('../public/icons/ring-dark.svg');
         background-size: cover;
-        margin: 0 8rem 0 0;
+        margin: 0 10rem 0 0;
       }
 
       &:hover &_icon {
-        background-image: url('../public/icons/phone-white.svg');
+        background-image: url('../public/icons/ring-white.svg');
       }
-
     }
   }
 
@@ -240,7 +239,6 @@
           &_link {
             width: 95rem;
             height: 95rem;
-  
           }
         }
       }
@@ -251,7 +249,12 @@
         font-size: 26rem;
         transform: translateY(-350rem);
         border-radius: 6rem;
-  
+
+        &_icon {
+          width: 38rem;
+          height: 38rem;
+          margin: 0 15rem 5rem 0;
+        }
       }
     }
 
@@ -277,7 +280,6 @@
       }
 
       &_contact { 
-
         &_social {
           margin: 300rem 0 0;
           height: 24rem;

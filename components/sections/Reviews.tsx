@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
-import { SliderReviews } from '../SliderReviews'
+import { SliderReviews } from '../SliderReviews';
 import { mockReviews } from '../../mocks/mocks';
+import { ReviewsModel } from '../../interfaces/reviews'
 import styles from '../../styles/reviews.module.scss'
 
-export function Reviews({ reviews: currentReviews }){
+interface ReviewsProps {
+  reviews: ReviewsModel[]
+}
+
+export function Reviews({ reviews: currentReviews }: ReviewsProps){
   const [reviews, setReviews] = useState(currentReviews);
 
   useEffect(() => {

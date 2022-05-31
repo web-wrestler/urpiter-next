@@ -6,10 +6,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { ReviewsModel } from '../interfaces/reviews'
 import styles from '../styles/slider-reviews.module.scss'
 
+interface ReviewsProps {
+  reviews: ReviewsModel[]
+}
 
-export function SliderReviews({ reviews }) {
+export function SliderReviews({ reviews }: ReviewsProps) {
   // console.log('reviews', reviews) 
 
   let src = process.env.API_URL_LOCAL || 'http://194.67.119.197:1337';

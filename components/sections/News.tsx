@@ -2,9 +2,15 @@ import { useEffect, useState } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { SliderNews } from '../SliderNews';
 import { mockNews } from '../../mocks/mocks'
+import { NewsModel } from '../../interfaces/news';
 import styles from '../../styles/news.module.scss';
 
-export function News({ news: currentNews }){
+
+interface NewsProps {
+  news: NewsModel[]
+}
+
+export function News({ news: currentNews }: NewsProps){
   const [news, setNews] = useState(currentNews);
 
   useEffect(() => {
