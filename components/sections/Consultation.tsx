@@ -4,10 +4,58 @@ import styles from '../../styles/consultation.module.scss'
 
 export function Consultation(){
   const [shortForm, setShortForm] = useState(false);
+  const [sendForm, setSendForm] = useState(false);
 
   const onChangeForm = () => {
     shortForm ? setShortForm(false) : setShortForm(true) ;
   };
+
+  // const telegramData = {
+  //   token: '5549909408:AAGZVnXvET4UM4moHwAeW9rgWzDyoZ-XYo0',
+  //   chat_id: '-1001677949127'
+  // }
+
+  // const telegramRequest = async(text) => {
+  //   let response = await fetch(
+  //     `https://api.telegram.org/bot${telegramData.token}/sendMessage?chat_id=${telegramData.chat_id}&parse_mode=html&text=${text}`, 
+  //     { method: 'POST' }
+  //     );
+  // }
+
+  const telegramRequest = async(text) => {
+    await fetch(
+     `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_TOKEN}/sendMessage?chat_id=${process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID}&parse_mode=html&text=${text}`, 
+     { method: 'POST' }
+     );
+   }
+
+   const sendFullForm = async(e) => {
+    e.preventDefault();
+
+    const data = {
+      email: e.target.email.value,
+      name: e.target.name.value,
+      phone: e.target.phone.value,
+      comment: e.target.comment.value,
+    }
+
+    const text = `%0AНовая заявка%0A%0AИмя: ${data.name || 'не указано'}%0AEmail: ${data.email}%0A
+Телефон: ${data.phone || 'не указан'}%0AТекст сообщения: ${data.comment}`;
+
+    await telegramRequest(text);
+    setSendForm(true);
+  }
+
+  const sendShortForm = async(e) => {
+    e.preventDefault();
+
+    const data = {
+      phone: e.target.phone.value,
+    }
+    const text = `%0AЗаявка на звонок%0A%0AНужно перезвонить по номеру: ${data.phone}`;
+    await telegramRequest(text);
+    setSendForm(true);
+  }
 
   return (
     <ScrollableAnchor id={'consultation'}>
@@ -17,36 +65,46 @@ export function Consultation(){
           <div className={styles.consultation__name_line}></div>
         </div>
         <div className={styles.consultation__container}>
-          <h2 className={styles.consultation__title}>Запишитесь на консультацию</h2>
-          <p className={styles.consultation__description}>Оставьте заявку, наши специалисты свяжутся с Вами и ответят на вопросы.</p>
-          <div className={styles.consultation__checkbox}>
-            <span className={styles.consultation__checkbox_line}></span>
-            <input className={styles.consultation__checkbox_input} 
-              type="checkbox" 
-              id="shortForm" 
-              name="shortForm" 
-              onChange={() => onChangeForm()}
-            />
-            <label className={styles.consultation__checkbox_label} htmlFor="shortForm">Оставить только телефон</label>
-          </div>
-          { shortForm ? (
-          <form className={`${styles.consultation__form} ${styles.consultation__form_short}`}>
-            <div className={`${styles.consultation__form} ${styles.consultation__form_container_short}`}>
-              <input className={`${styles.consultation__form_input} ${styles.consultation__form_input_short}`} type="tel" name="phone" placeholder="Телефон" required/>
-            </div>
-            <button className={`${styles.consultation__form_btn} ${styles.consultation__form_btn_short}`} type="submit">Оставить заявку</button>
-          </form>
-          ) : (
-          <form className={styles.consultation__form}>
-            <div className={styles.consultation__form_container}>
-              <input className={styles.consultation__form_input} type="text" name="name" placeholder="Имя"/>
-              <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта" required/>
-              <input className={styles.consultation__form_input} type="tel" name="phone" placeholder="Телефон"/>
-            </div>
-            <textarea className={styles.consultation__form_textarea}  name="comment" placeholder="Опишите вашу проблему" required />
-            <button className={styles.consultation__form_btn} type="submit">Записаться на консультацию</button>
-          </form>
+          {!sendForm && (
+            <>
+              <h2 className={styles.consultation__title}>Запишитесь на консультацию</h2>
+              <p className={styles.consultation__description}>Оставьте заявку, наши специалисты свяжутся с Вами и ответят на вопросы.</p>
+              <div className={styles.consultation__checkbox}>
+                <span className={styles.consultation__checkbox_line}></span>
+                <input className={styles.consultation__checkbox_input} 
+                  type="checkbox" 
+                  id="shortForm" 
+                  name="shortForm" 
+                  onChange={() => onChangeForm()}
+                />
+                <label className={styles.consultation__checkbox_label} htmlFor="shortForm">Оставить только телефон</label>
+              </div>
+            </>
           )}
+          { shortForm ? (
+              sendForm ? 
+                <h2 className={styles.consultation__title}><br />Заявка отправлена. Мы свяжемся с Вами.</h2>
+                :
+                <form className={`${styles.consultation__form} ${styles.consultation__form_short}`} onSubmit={sendShortForm}>
+                  <div className={`${styles.consultation__form} ${styles.consultation__form_container_short}`}>
+                    <input className={`${styles.consultation__form_input} ${styles.consultation__form_input_short}`} type="tel" name="phone" placeholder="Телефон" required/>
+                  </div>
+                  <button className={`${styles.consultation__form_btn} ${styles.consultation__form_btn_short}`} type="submit">Оставить заявку</button>
+                </form>
+              ) : (
+              sendForm ? 
+                <h2 className={styles.consultation__title}><br />Заявка отправлена. Мы свяжемся с Вами.</h2>
+                :
+                <form className={styles.consultation__form} onSubmit={sendFullForm}>
+                  <div className={styles.consultation__form_container}>
+                    <input className={styles.consultation__form_input} type="text" name="name" placeholder="Имя"/>
+                    <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта" required/>
+                    <input className={styles.consultation__form_input} type="tel" name="phone" placeholder="Телефон"/>
+                  </div>
+                  <textarea className={styles.consultation__form_textarea}  name="comment" placeholder="Опишите вашу проблему" required />
+                  <button className={styles.consultation__form_btn} type="submit">Записаться на консультацию</button>
+                </form>
+              )}
         </div>
       </section>
     </ScrollableAnchor>

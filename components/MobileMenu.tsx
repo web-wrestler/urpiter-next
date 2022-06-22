@@ -1,5 +1,6 @@
 import {RemoveScroll} from 'react-remove-scroll';
 import { Navigation } from "./Navigation";
+import { FormCall } from './FormCall';
 import styles from '../styles/mobile-menu.module.scss'
 
 export function MobileMenu({ onClose }){
@@ -8,13 +9,10 @@ export function MobileMenu({ onClose }){
     <RemoveScroll>
       <div className={styles.mobile_menu}>
         <div className={styles.mobile_menu__container}>
-          <h3 className={styles.mobile_menu__email}>zadelo@gmail.com</h3>
-          <h2 className={styles.mobile_menu__phone}>8 800 571 70 90</h2>
+          <h3 className={styles.mobile_menu__email}>urpiter@inbox.ru</h3>
+          <a href='tel:+78129002097' className={styles.mobile_menu__phone}>8 (812) 900 20 97</a>
           <Navigation active='main' onClose={onClose} />
-          <form className={styles.mobile_menu__form}>
-            <input className={styles.mobile_menu__form_input} type="tel" name="phone" placeholder="Телефон" required />
-            <button className={styles.mobile_menu__form_button} type="submit">Заказать звонок</button>
-          </form>
+          <FormCall context="mobile"/>
         </div> 
       </div>
     </RemoveScroll>

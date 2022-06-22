@@ -20,7 +20,7 @@ export function Contacts({onOpenPopup}){
               </div> 
               <h3 className={styles.contacts__box_name}>АДРЕС</h3>
             </div>
-            <p className={styles.contacts__box_text}>Центральный район, Таврическая улица, 27</p>
+            <p className={styles.contacts__box_text}>Центральный район, ул Таврическая 17, лит.А, оф.413</p>
     
             <div className={styles.contacts__box}>
               <div className={ `${styles.contacts__box_icon} ${styles.contacts__box_icon_large}`}>
@@ -28,7 +28,7 @@ export function Contacts({onOpenPopup}){
               </div> 
               <h3 className={styles.contacts__box_name}>ТЕЛЕФОН</h3>
             </div>
-            <p className={styles.contacts__box_text}>8 800 571 70 90</p>
+            <p className={styles.contacts__box_text}>8 (812) 900 20 97</p>
     
             <div className={styles.contacts__box}>
               <div className={styles.contacts__box_icon}>
@@ -36,7 +36,7 @@ export function Contacts({onOpenPopup}){
               </div> 
               <h3 className={styles.contacts__box_name}>E-MAIL</h3>
             </div>
-            <p className={styles.contacts__box_text}>zadelo@gmail.com</p>
+            <p className={styles.contacts__box_text}>urpiter@inbox.ru</p>
             <button className={styles.contacts_btn} onClick={() => onOpenPopup()}>Заказать звонок</button>
           </div>
   

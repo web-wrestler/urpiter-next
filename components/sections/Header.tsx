@@ -16,6 +16,7 @@ export function Header({toggleMobileMenu, onClose}){
     return () => window.removeEventListener("scroll", handleScroll);
   }, [])
 
+
   return (
     <section className={`${styles.header} ${scroll > 50 && styles.header_scroll}`}>
       <div className={styles.header_logo}>
@@ -25,8 +26,8 @@ export function Header({toggleMobileMenu, onClose}){
         <Navigation active='main' onClose={onClose}/>
       </div>
       <div className={styles.header_btn_container}>
-        <a href='tel:+78005717090' className={`${styles.header_btn} ${styles.header_btn_phone}`}>Телефон</a>
-        <div className={`${styles.header_btn} ${styles.header_btn_profile}`}>Личный кабинет</div>
+        <a href='tel:+78129002097' className={`${styles.header_btn} ${styles.header_btn_phone}`}>Телефон</a>
+        <button className={`${styles.header_btn} ${styles.header_btn_profile}`}>Личный кабинет</button>
       </div>
       <div className={styles.header_mobile}>
         <div className={styles.header_mobile_profile}>

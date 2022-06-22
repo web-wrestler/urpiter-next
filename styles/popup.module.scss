@@ -82,49 +82,56 @@
     line-height: 140%;
     margin: 0;
   }
+}
 
-  &__form {
-    margin: 27rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    width: 318rem;
+.form {
+  margin: 27rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 318rem;
 
-    &_input {
-      width: 100%;
-      height: 58rem;
-      border: 1px solid #C9D5E8;
-      box-shadow: inset 0 0 34rem #F2F2F2;
-      border-radius: 8rem;
-      padding-left: 16rem; 
-      padding-top: 0rem;
-      margin: 0 22rem 0 0 ;
+  &_input {
+    width: 100%;
+    height: 58rem;
+    border: 1px solid #C9D5E8;
+    box-shadow: inset 0 0 34rem #F2F2F2;
+    border-radius: 8rem;
+    padding-left: 16rem; 
+    padding-top: 0rem;
+    margin: 0 22rem 0 0 ;
 
-      font-weight: 500;
-      font-size: 17rem;
-      line-height: 140%;
-      color: #071737;
+    font-weight: 500;
+    font-size: 17rem;
+    line-height: 140%;
+    color: #071737;
 
-      &::placeholder {
-        color: #859AB5;
-      }
+    &::placeholder {
+      color: #859AB5;
     }
+  }
 
-    &_button {
-      width: 100%;
-      height: 58rem;
-      background: #071737;
-      border-radius: 8rem; 
-      border: none;
-      font-weight: 600;
-      font-size: 17rem;
-      line-height: 140%;
-      color: #fff;
-      margin: 23rem 0;
-      &:hover {
-        cursor: pointer;
-        background-color: #F2A446;
-      }
+  &_button {
+    width: 100%;
+    height: 58rem;
+    background: #071737;
+    border-radius: 8rem; 
+    border: none;
+    font-weight: 600;
+    font-size: 17rem;
+    line-height: 140%;
+    color: #fff;
+    margin: 23rem 0;
+    &:hover {
+      cursor: pointer;
+      background-color: #F2A446;
     }
+  }
+  &_send {
+    font-size: 28rem;
+    text-align: center;
+    line-height: 160%;
+    opacity: 0.7;
+    margin: 50rem 0 0rem;
   }
 }
 
@@ -159,22 +166,27 @@
     &__time {
       font-size: 22rem;
     }
+  }
 
-    &__form {
-      margin: 35rem 0 0 0;
-      width: 420rem;
-  
-      &_input {
-        height: 82rem;
-        border-radius: 12rem;
-        font-size: 26rem;
-      }
+  .form {
+    margin: 35rem 0 0 0;
+    width: 420rem;
 
-      &_button {
-        height: 82rem;
-        border-radius: 12rem; 
-        font-size: 26rem;
-      }
+    &_input {
+      height: 82rem;
+      border-radius: 12rem;
+      font-size: 26rem;
+    }
+
+    &_button {
+      height: 82rem;
+      border-radius: 12rem; 
+      font-size: 26rem;
+    }
+
+    &_send {
+      margin: 30rem 0 20rem;
     }
   }
+
 }

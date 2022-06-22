@@ -58,10 +58,10 @@ export function Footer(){
               <span className={styles.text_orange}>Расписание</span>
             </li>
             <li className={styles.footer__container_nav_item}>
-              <span className={styles.text_orange}>Пн-Пт:</span> <span className={styles.text_white}>10:00 - 19:00</span>
+              <span className={styles.text_orange}>Пн-Пт:</span> <span className={styles.text_white}>9:00 - 19:00</span>
             </li>
             <li className={styles.footer__container_nav_item}>
-              <span className={styles.text_orange}>Сб:</span>  <span className={styles.text_white}>11:00 - 17:00</span>
+              <span className={styles.text_orange}>Сб:</span>  <span className={styles.text_white}>по записи</span>
             </li>
             <li className={styles.footer__container_nav_item}>
               <span className={styles.text_orange}>Вс:</span>  <span className={styles.text_white}>по записи</span>
@@ -69,8 +69,8 @@ export function Footer(){
           </ul> 
           
           <div className={styles.footer__container_contacts}>
-            <p className={styles.footer__container_contacts_email}>zadelo@gmail.com</p>
-            <p className={styles.footer__container_contacts_tel}>8 800 301 6650</p>
+            <p className={styles.footer__container_contacts_email}>urpiter@inbox.ru</p>
+            <p className={styles.footer__container_contacts_tel}>8 (812) 900 20 97</p>
             <ul className={styles.footer__container_contacts_social}>
             <li className={styles.footer__container_contacts_social_item}>
                 <a href="#" className={`${styles.footer__container_contacts_social_link} `}>

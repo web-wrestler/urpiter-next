@@ -15,9 +15,9 @@ export function Greeting({onOpenPopup}){
         </div>
         <h2 className={styles.greeting__info_title}>Помощь юриста, адвоката</h2>
         <h3 className={styles.greeting__info_subtitle}>в Санкт-Петербурге и Ленинградской области</h3>
-        <p className={styles.greeting__info_text}>Для бизнеса и граждан</p>
+        <p className={styles.greeting__info_text}>для бизнеса и граждан</p>
         <div className={styles.greeting__info_contact}>
-          <p className={styles.greeting__info_contact_tel}>8 900 571 70 90</p>
+          <a href='tel:+78129002097' className={styles.greeting__info_contact_tel}>8 (812) 900 20 97</a>
           <ul className={styles.greeting__info_contact_social}>
             <li className={styles.greeting__info_contact_social_item}>
               <a href='#' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_watsapp}`}></a>
