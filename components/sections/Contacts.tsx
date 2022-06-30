@@ -36,7 +36,7 @@ export function Contacts({onOpenPopup}){
               </div> 
               <h3 className={styles.contacts__box_name}>E-MAIL</h3>
             </div>
-            <p className={styles.contacts__box_text}>urpiter@inbox.ru</p>
+            <p className={styles.contacts__box_text}>info@urpiter.com</p>
             <button className={styles.contacts_btn} onClick={() => onOpenPopup()}>Заказать звонок</button>
           </div>
   

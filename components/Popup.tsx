@@ -13,7 +13,7 @@ export function Popup({ isOpenPopup, onClose }){
             <div className={styles.popup__button_close} onClick={onClose}>
               <Image loader={() => "/icons/icon-close-modal.svg?w=32"} src={"/icons/icon-close-modal.svg"} width={32} height={32} alt="крестик" />
             </div> 
-            <p className={styles.popup__email}>urpiter@inbox.ru</p>
+            <p className={styles.popup__email}>info@urpiter.com</p>
             <h3 className={styles.popup__phone}>8 (812) 900 20 97</h3>
             <p className={styles.popup__time}>Пн - Пт: с 9 до 19</p>
             <p className={styles.popup__time}>Суб - Вс: по записи</p>

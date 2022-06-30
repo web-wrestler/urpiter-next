@@ -23,7 +23,7 @@ export function Greeting({onOpenPopup}){
               <a href='#' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_watsapp}`}></a>
             </li>
             <li className={styles.greeting__info_contact_social_item}>
-              <a href='#' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_vk}`}></a>
+              <a href='https://vk.com/urpitercom' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_vk}`}></a>
             </li>
             <li className={styles.greeting__info_contact_social_item}>
               <a href='https://t.me/UrPiter' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_telegram}`} target="_blank"></a>

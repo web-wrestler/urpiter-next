@@ -10,18 +10,6 @@ export function Consultation(){
     shortForm ? setShortForm(false) : setShortForm(true) ;
   };
 
-  // const telegramData = {
-  //   token: '5549909408:AAGZVnXvET4UM4moHwAeW9rgWzDyoZ-XYo0',
-  //   chat_id: '-1001677949127'
-  // }
-
-  // const telegramRequest = async(text) => {
-  //   let response = await fetch(
-  //     `https://api.telegram.org/bot${telegramData.token}/sendMessage?chat_id=${telegramData.chat_id}&parse_mode=html&text=${text}`, 
-  //     { method: 'POST' }
-  //     );
-  // }
-
   const telegramRequest = async(text) => {
     await fetch(
      `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_TOKEN}/sendMessage?chat_id=${process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID}&parse_mode=html&text=${text}`, 
@@ -40,7 +28,7 @@ export function Consultation(){
     }
 
     const text = `%0AНовая заявка%0A%0AИмя: ${data.name || 'не указано'}%0AEmail: ${data.email}%0A
-Телефон: ${data.phone || 'не указан'}%0AТекст сообщения: ${data.comment}`;
+Телефон: ${data.phone || 'не указан'}%0AСообщение: ${data.comment}`;
 
     await telegramRequest(text);
     setSendForm(true);
@@ -67,7 +55,7 @@ export function Consultation(){
         <div className={styles.consultation__container}>
           {!sendForm && (
             <>
-              <h2 className={styles.consultation__title}>Запишитесь на консультацию</h2>
+              <h2 className={styles.consultation__title}>Записаться на консультацию</h2>
               <p className={styles.consultation__description}>Оставьте заявку, наши специалисты свяжутся с Вами и ответят на вопросы.</p>
               <div className={styles.consultation__checkbox}>
                 <span className={styles.consultation__checkbox_line}></span>
@@ -87,7 +75,7 @@ export function Consultation(){
                 :
                 <form className={`${styles.consultation__form} ${styles.consultation__form_short}`} onSubmit={sendShortForm}>
                   <div className={`${styles.consultation__form} ${styles.consultation__form_container_short}`}>
-                    <input className={`${styles.consultation__form_input} ${styles.consultation__form_input_short}`} type="tel" name="phone" placeholder="Телефон" required/>
+                    <input className={`${styles.consultation__form_input} ${styles.consultation__form_input_short}`} type="tel" name="phone" placeholder="Телефон" maxLength={16} required/>
                   </div>
                   <button className={`${styles.consultation__form_btn} ${styles.consultation__form_btn_short}`} type="submit">Оставить заявку</button>
                 </form>
@@ -97,11 +85,11 @@ export function Consultation(){
                 :
                 <form className={styles.consultation__form} onSubmit={sendFullForm}>
                   <div className={styles.consultation__form_container}>
-                    <input className={styles.consultation__form_input} type="text" name="name" placeholder="Имя"/>
-                    <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта" required/>
-                    <input className={styles.consultation__form_input} type="tel" name="phone" placeholder="Телефон"/>
+                    <input className={styles.consultation__form_input} type="text" name="name" placeholder="Имя" maxLength={20}/>
+                    <input className={styles.consultation__form_input} type="email" name="email" placeholder="Почта" maxLength={25} required/>
+                    <input className={styles.consultation__form_input} type="tel" name="phone" placeholder="Телефон" maxLength={16}/>
                   </div>
-                  <textarea className={styles.consultation__form_textarea}  name="comment" placeholder="Опишите вашу проблему" required />
+                  <textarea className={styles.consultation__form_textarea}  name="comment" placeholder="Опишите вашу проблему" maxLength={400} required />
                   <button className={styles.consultation__form_btn} type="submit">Записаться на консультацию</button>
                 </form>
               )}
