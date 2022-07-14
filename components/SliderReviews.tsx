@@ -17,9 +17,12 @@ export function SliderReviews({ reviews }: ReviewsProps) {
   // console.log('reviews', reviews) 
 
   let src = process.env.API_URL_LOCAL || 'https://urpiter.com:1338';
-  if(reviews[0].attributes.avatar.data && reviews[0].attributes.avatar.data.attributes.url.includes('/avatars/')){
-    src = '' 
+  if(reviews[0]){
+    if(reviews[0].attributes.avatar.data && reviews[0].attributes.avatar.data.attributes.url.includes('/avatars/')){
+      src = '' 
+    }
   }
+
  
   return (
   <>

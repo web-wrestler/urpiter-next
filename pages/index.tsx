@@ -67,7 +67,7 @@ export const getServerSideProps = async (context: any) => {
     return {props: {news: null, reviews: null}}
   }
 
-  const news: NewsModel[] = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/all-news?populate=*`)
+  let news: NewsModel[] = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/all-news?populate=*`)
   .then(res => {
     return res.json();
   })
@@ -78,7 +78,7 @@ export const getServerSideProps = async (context: any) => {
     console.log('error', e);
   })
   
-  const reviews = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews?populate=*`)
+  let reviews = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/reviews?populate=*`)
   .then(res => {
     return res.json();
   })
@@ -89,6 +89,8 @@ export const getServerSideProps = async (context: any) => {
     console.log('error', e);
   })
 
+  if(!news)news=[];
+  if(!reviews)reviews=[];
 
   return {
     props: {

@@ -55,7 +55,7 @@ export function Footer(){
 
           <ul className={styles.footer__container_nav}>
             <li className={`${styles.footer__container_nav_item} ${styles.footer__container_nav_bottom_21}`}> 
-              <span className={styles.text_orange}>Расписание</span>
+              <span className={styles.text_orange}>Часы работы</span>
             </li>
             <li className={styles.footer__container_nav_item}>
               <span className={styles.text_orange}>Пн-Пт:</span> <span className={styles.text_white}>9:00 - 19:00</span>
@@ -69,7 +69,7 @@ export function Footer(){
           </ul> 
           
           <div className={styles.footer__container_contacts}>
-            <p className={styles.footer__container_contacts_email}>urpiter@inbox.ru</p>
+            <p className={styles.footer__container_contacts_email}>info@urpiter.com</p>
             <p className={styles.footer__container_contacts_tel}>8 (812) 900 20 97</p>
             <ul className={styles.footer__container_contacts_social}>
             <li className={styles.footer__container_contacts_social_item}>
@@ -83,7 +83,7 @@ export function Footer(){
                 </a>
               </li>
               <li className={styles.footer__container_contacts_social_item}>
-                <a href="#" className={`${styles.footer__container_contacts_social_link} `}>
+                <a href="https://vk.com/urpitercom" className={`${styles.footer__container_contacts_social_link} `}>
                   <Image loader={() => "/icons/social-vk-white.svg?w=61"} src={"/icons/social-vk-white.svg"} width={61} height={61} alt="ютуб" />
                 </a>
               </li>

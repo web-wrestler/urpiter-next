@@ -21,6 +21,7 @@ export function Contacts({onOpenPopup}){
               <h3 className={styles.contacts__box_name}>АДРЕС</h3>
             </div>
             <p className={styles.contacts__box_text}>Центральный район, ул Таврическая 17, лит.А, оф.413</p>
+            <p className={styles.contacts__box_text}>Адмиралтейский район, ул Загородный проспект 22</p>
     
             <div className={styles.contacts__box}>
               <div className={ `${styles.contacts__box_icon} ${styles.contacts__box_icon_large}`}>
