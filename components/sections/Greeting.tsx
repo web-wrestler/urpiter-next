@@ -20,10 +20,10 @@ export function Greeting({onOpenPopup}){
           <a href='tel:+78129002097' className={styles.greeting__info_contact_tel}>8 (812) 900 20 97</a>
           <ul className={styles.greeting__info_contact_social}>
             <li className={styles.greeting__info_contact_social_item}>
-              <a href='#' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_watsapp}`}></a>
+              <a href='https://wa.me/+79313329020?text=Сообщение+с+сайта' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_watsapp}`} target="_blank"></a>
             </li>
             <li className={styles.greeting__info_contact_social_item}>
-              <a href='https://vk.com/urpitercom' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_vk}`}></a>
+              <a href='https://vk.com/urpitercom' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_vk}`} target="_blank"></a>
             </li>
             <li className={styles.greeting__info_contact_social_item}>
               <a href='https://t.me/UrPiter' className={`${styles.greeting__info_contact_social_link} ${styles.greeting__info_contact_social_telegram}`} target="_blank"></a>

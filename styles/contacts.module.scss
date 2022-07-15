@@ -120,7 +120,7 @@
     background-repeat: no-repeat;
 
     &__name {
-      margin: 80rem auto 0;
+      margin: 40rem auto 0;
     }
 
     &__container {
@@ -145,7 +145,7 @@
     }
 
     &__box {
-      margin: 52rem 0 0;
+      margin: 44rem 0 0;
 
       &_icon {
           width: 40rem;
@@ -164,8 +164,8 @@
       }
 
       &_text {
-        font-size: 40rem;
-        line-height: 52rem;
+        font-size: 36rem;
+        line-height: 48rem;
         margin: 10rem 0 0 63rem;
       }
     }
@@ -173,7 +173,7 @@
     &_btn {
       width: 416rem;
       height: 80rem;
-      margin: 86rem auto 0;
+      margin: 60rem auto 0;
       font-size: 26rem;
 
       &:hover {
@@ -188,7 +188,7 @@
       align-items: center;
       width: 100%;
       height: 94.5rem;
-      margin: 165rem 0 0;
+      margin: 100rem 0 0;
       background: #fff;
 
       font-weight: 700;
@@ -210,16 +210,23 @@
 
 @media screen and (max-width: 450px) {
   .contacts { 
+    &__name {
+      margin: 60rem auto 0;
+    }
 
     &_btn {
       width: 100%;
       height: 100rem;
       font-size: 34rem;
       border-radius: 12rem;
+      margin: 60rem auto 0;
     }
 
     &__caption {
-      margin: 140rem 0 0;
+      margin: 40rem 0 0;
+    }
+    &__map {
+      margin: 0;
     }
   }
 }

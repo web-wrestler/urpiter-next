@@ -73,13 +73,13 @@ export function Footer(){
             <p className={styles.footer__container_contacts_tel}>8 (812) 900 20 97</p>
             <ul className={styles.footer__container_contacts_social}>
             <li className={styles.footer__container_contacts_social_item}>
-                <a href="#" className={`${styles.footer__container_contacts_social_link} `}>
-                  <Image loader={() => "/icons/social-watsapp-white.svg?w=61"} src={"/icons/social-watsapp-white.svg"} width={61} height={61} alt="инстаграм" />
+                <a href="https://wa.me/+79313329020?text=Сообщение+с+сайта" className={`${styles.footer__container_contacts_social_link} `}>
+                  <Image loader={() => "/icons/social-watsapp-white.svg?w=61"} src={"/icons/social-watsapp-white.svg"} width={61} height={61} alt="вотцап" />
                 </a>
               </li>
               <li className={styles.footer__container_contacts_social_item}>
                 <a href="https://t.me/UrPiter" className={`${styles.footer__container_contacts_social_link}`} target="_blank">
-                  <Image loader={() => "/icons/social-telegram-white.svg?w=61"} src={"/icons/social-telegram-white.svg"} width={61} height={61} alt="инстаграм" />
+                  <Image loader={() => "/icons/social-telegram-white.svg?w=61"} src={"/icons/social-telegram-white.svg"} width={61} height={61} alt="телеграм" />
                 </a>
               </li>
               <li className={styles.footer__container_contacts_social_item}>
