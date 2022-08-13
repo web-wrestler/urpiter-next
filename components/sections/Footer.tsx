@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../../styles/footer.module.scss'
 
-export function Footer(){
+export default function Footer(){
 
   return (
     <section className={styles.footer}>
@@ -15,11 +16,7 @@ export function Footer(){
                 О компании
               </a>
             </li>
-            <li className={styles.footer__container_nav_item}>
-              <a href="#services" className={styles.footer__container_nav_link} >
-                Услуги
-              </a>
-            </li>
+
             <li className={styles.footer__container_nav_item}>
               <a href="#command" className={styles.footer__container_nav_link} >
                 Новости
@@ -42,14 +39,18 @@ export function Footer(){
               Услуги
             </li>
             <li className={styles.footer__container_nav_item}>
-              <a href="#services" className={styles.footer__container_nav_link} >
-                Для физ лиц
-              </a>
+              <Link href={'/services/physical'}> 
+                <a className={styles.footer__container_nav_link} >
+                  Для физ лиц
+                </a>
+              </Link>
             </li>
             <li className={styles.footer__container_nav_item}>
-              <a href="#services" className={styles.footer__container_nav_link} >
-                Для юр лиц
-              </a>
+              <Link href={'/services/legal'}> 
+                <a className={styles.footer__container_nav_link} >
+                  Для юр лиц
+                </a>
+              </Link> 
             </li>
           </ul> 
 

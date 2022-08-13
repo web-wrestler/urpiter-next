@@ -3,7 +3,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import { SliderNews } from '../SliderNews';
 import { mockNews } from '../../mocks/mocks'
 import { NewsModel } from '../../interfaces/news';
-import styles from '../../styles/news.module.scss';
+import styles from '../../styles/main/news.module.scss';
 
 
 interface NewsProps {

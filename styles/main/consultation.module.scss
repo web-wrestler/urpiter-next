@@ -3,14 +3,14 @@
     display: flex;
     flex-direction: column;
     // background-color: #F2A446;
-    background-image: url('../public/bg/bg-consultation.png');
+    background-image: url('../../public/bg/bg-consultation.png');
     // background-size: cover;
     background-size: 101% 877rem;
     // box-shadow: inset 0px 7rem 100rem rgba(255, 255, 255, 0.25);
     color: #fff;
 
     &_short {
-      background-image: url('../public/bg/bg-consultation-short.png');
+      background-image: url('../../public/bg/bg-consultation-short.png');
       background-size: contain;
     }
 
@@ -213,7 +213,7 @@
   .consultation { 
     align-items: center;
     min-height: 835rem;
-    background-image: url('../public/bg/bg-consultation-mobile.png');
+    background-image: url('../../public/bg/bg-consultation-mobile.png');
     background-size: cover;
 
     &__name {

@@ -7,9 +7,9 @@ export function Navigation({ active, onClose }){
     <nav className={styles.nav}>
       <ul className={styles.nav__list} onClick={onClose}>
         <li className={`${active == 'main' ? styles.nav__link_active : ''} ${styles.nav__item}`}>
-          {/* <Link href={'/'}> */}
-            <a href="#main" className={styles.nav__link}>Главная</a>
-          {/* </Link> */}
+          <Link href={'/'}>
+            <a className={styles.nav__link}>Главная</a>
+          </Link>
         </li>
         <li className={styles.nav__item}>
           {/* <Link href={'/demo'}> */}
@@ -18,12 +18,12 @@ export function Navigation({ active, onClose }){
             </a>
           {/* </Link> */}
         </li>
-        <li className={styles.nav__item}>
-          {/* <Link href={'/demo'}> */}
-            <a href="#services" className={styles.nav__link}>
+        <li className={`${active == 'service' ? styles.nav__link_active : ''} ${styles.nav__item}`}>
+           <Link href={'/services/physical'}> 
+            <a className={styles.nav__link}>
               Услуги
             </a>
-          {/* </Link> */}
+           </Link> 
         </li>
         <li className={styles.nav__item}>
           {/* <Link href={'/demo'}> */}

@@ -14,33 +14,39 @@
   transform: translateY(-80rem);
   z-index: 2;
   
+  &__second {
+    width: 100%;
+    position: relative;
+    transform: translateY(0rem);
+    background-image: none;
+  }
 
-  &_scroll {
+  &__scroll {
     backdrop-filter: blur(4rem);
     background-image: none;
     background-color: rgba(255, 255, 255, 0.5);
   }
   
-  &_logo {
+  &__logo {
     min-width: 257rem;
     max-width: 257rem;
     margin: 0 220rem 0 0rem;
   }
 
-  &_nav {
+  &__nav {
     width: 100%;
     height: 100%;
     display: block;
   }
 
-  &_btn_container {
+  &__btn__container {
     width: 400rem;
     height: 50rem;
     margin: 0 0rem 0 0;
     display: flex;
   }
 
-  &_btn {
+  &__btn {
     height: 48rem;
     border-radius: 8rem;
     font-family: 'Inter';
@@ -56,20 +62,20 @@
       cursor: pointer;
     }
 
-   &_phone {
+   &__phone {
     width: 132rem;
     background-color: #1B2B4B;
     margin: 0 12rem 0 0;
    }
    
-   &_profile {
+   &__profile {
      width: 195rem;
      background-color: #F2A446;
      border: none;
    }
   }
 
-  &_mobile { 
+  &__mobile { 
     display: none;
   }
 }
@@ -84,29 +90,32 @@
     align-items: center;
     transform: translateY(-60rem);
 
+    &__second {
+      transform: translateY(0rem);
+    }
 
-    &_logo {
+    &__logo {
       min-width: 198rem;
       width: 198rem;
       margin: 0 220rem 0 0rem;
     }
 
-    &_nav {
+    &__nav {
       display: none;
     }
 
-    &_btn_container { 
+    &__btn__container { 
       display: none;
     }
 
-    &_mobile {
+    &__mobile {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       width: 90rem;
       // border: 1px solid green;
 
-      &_profile {
+      &__profile {
         width: 35rem;
         height: 35rem;
 
@@ -115,7 +124,7 @@
         }
       }
 
-      &_menu {
+      &__menu {
         width: 35rem;
         height: 35rem;
         padding: 0;
@@ -136,19 +145,19 @@
     height: 120rem;
     padding: 0 40rem;
 
-    &_logo {
+    &__logo {
       min-width: 275rem;
       width: 275rem;
     }
 
-    &_mobile {
+    &__mobile {
       width: 130rem;
 
-      &_profile {
+      &__profile {
         width: 50rem;
         height: 50rem;
       }
-      &_menu {
+      &__menu {
         width: 50rem;
         height: 50rem;
       }

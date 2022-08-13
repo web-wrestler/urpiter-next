@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import styles from '../../styles/greeting.module.scss'
+import styles from '../../styles/main/greeting.module.scss'
 
 export function Greeting({onOpenPopup}){
 

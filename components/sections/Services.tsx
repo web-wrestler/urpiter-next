@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import styles from '../../styles/services.module.scss'
+import styles from '../../styles/main/services.module.scss'
 
 export function Services(){
 
@@ -13,12 +14,16 @@ export function Services(){
         </div>
         <h2 className={styles.services__title}>Юридические услуги</h2>
         <div className={styles.services__container}>
-          <div className={`${styles.services__element} ${styles.services__element_physical}`}>
-            <div className={styles.services__element_text}>Для физических лиц</div>
-          </div>
-          <div className={`${styles.services__element} ${styles.services__element_legal}`}>
-            <div className={styles.services__element_text}>Для юридических лиц</div>
-          </div>
+          <Link href={'/services/physical'} passHref>
+            <a className={`${styles.services__element} ${styles.services__element_physical}`}>
+              <div className={styles.services__element_text}>Для физических лиц</div>
+            </a>
+          </Link>
+          <Link href={'/services/legal'} passHref>
+            <a className={`${styles.services__element} ${styles.services__element_legal}`}>
+              <div className={styles.services__element_text}>Для юридических лиц</div>
+            </a>
+          </Link>
         </div> 
       </section>
     </ScrollableAnchor>

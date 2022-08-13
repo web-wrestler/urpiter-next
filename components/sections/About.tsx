@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import ReactTooltip from 'react-tooltip';
-import styles from '../../styles/about.module.scss'
+import styles from '../../styles/main/about.module.scss'
 
 export function About(){
 

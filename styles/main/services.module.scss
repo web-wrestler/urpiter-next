@@ -1,7 +1,7 @@
 .services {  
   height: 887rem;
 
-  background-image: url('../public/bg/bg-services.png');
+  background-image: url('../../public/bg/bg-services.png');
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@
     }
 
     &_physical {
-      background-image: url('../public/elements/services-physical.png');
+      background-image: url('../../public/elements/services-physical.png');
       position: relative;
 
       &::after{
@@ -81,12 +81,12 @@
 
       &:hover::after{
         cursor: pointer;
-        background-image: url('../public/elements/services-physical-active.png');
+        background-image: url('../../public/elements/services-physical-active.png');
       }
     }
   
     &_legal {
-      background-image: url('../public/elements/services-legal.png');
+      background-image: url('../../public/elements/services-legal.png');
       position: relative;
 
       &::after{
@@ -100,7 +100,7 @@
 
       &:hover::after{
         cursor: pointer;
-        background-image: url('../public/elements/services-legal-active.png');
+        background-image: url('../../public/elements/services-legal-active.png');
         background-position: top right 12rem;
       }
     }
@@ -122,7 +122,7 @@
 @media screen and (max-width: 768px) {
   .services { 
     height: 1494rem;
-    background-image: url('../public/bg/bg-services-mobile.png');
+    background-image: url('../../public/bg/bg-services-mobile.png');
 
     &__name {
       margin: 170rem auto 0;
@@ -155,7 +155,7 @@
       }
 
       &_physical {
-        background-image: url('../public/elements/services-physical-mobile.png');
+        background-image: url('../../public/elements/services-physical-mobile.png');
 
         &:hover::after{
           cursor: pointer;
@@ -164,7 +164,7 @@
       }
 
       &_legal {
-        background-image: url('../public/elements/services-legal-mobile.png');
+        background-image: url('../../public/elements/services-legal-mobile.png');
 
         &:hover::after{
           cursor: pointer;

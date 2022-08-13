@@ -1,18 +1,19 @@
 
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MainLayout } from '../components/MainLayout'
-import { Header } from '../components/sections/Header'
+import Header from '../components/sections/Header'
 import { Greeting } from '../components/sections/Greeting'
 import { About } from '../components/sections/About'
 import { Services } from '../components/sections/Services'
 import { News } from '../components/sections/News'
 import { Consultation } from '../components/sections/Consultation'
 import { Reviews } from '../components/sections/Reviews'
-import { Contacts } from '../components/sections/Contacts'
-import { Footer } from '../components/sections/Footer'
+import Contacts from '../components/sections/Contacts'
+import Footer from '../components/sections/Footer'
 import { Popup } from '../components/Popup';
 import { MobileMenu } from '../components/MobileMenu';
 import { ButtonCall } from '../components/ButtonCall';
+import { Context } from '../popupsContext'
 
 import { NewsModel } from '../interfaces/news';
 import styles from '../styles/Home.module.scss'
@@ -20,20 +21,15 @@ import styles from '../styles/Home.module.scss'
 
 
 export default function Home({ news, reviews }) {
-  const [isOpenPopup, setIsOpenPopup] = useState(false);
-  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
+  const { 
+    handleOpenPopup, 
+    closeAllModals, 
+    toggleMobileMenu, 
+    isOpenMobileMenu, 
+    isOpenPopup, 
+    namePopup 
+  } = useContext(Context);
 
-  const handleOpenPopup = () => {
-    setIsOpenPopup(true);
-  }
-  const toggleMobileMenu = () => {
-    isOpenMobileMenu ? setIsOpenMobileMenu(false) : setIsOpenMobileMenu(true);
-  }
-
-  const closeAllModals = () => {
-    setIsOpenPopup(false);
-    setIsOpenMobileMenu(false);
-  } 
 
   return (
     <MainLayout 
@@ -41,7 +37,7 @@ export default function Home({ news, reviews }) {
       description={'Юридическая помощь'}
     >
       <main className={styles.main}>
-        <Header toggleMobileMenu={toggleMobileMenu} onClose={closeAllModals} />
+        <Header toggleMobileMenu={toggleMobileMenu} onClose={closeAllModals} active="main" style="main"/>
         <Greeting onOpenPopup={handleOpenPopup} />
         <About />
         <Services />

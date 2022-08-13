@@ -1,6 +1,6 @@
 .about {
     height: 882rem;
-    background-image: url('../public/bg/bg-about.png');
+    background-image: url('../../public/bg/bg-about.png');
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -94,7 +94,7 @@
 @media screen and (max-width: 768px) {
   .about { 
     height: 1780rem;
-    background-image: url('../public/bg/bg-about-mobile.png');
+    background-image: url('../../public/bg/bg-about-mobile.png');
     align-items: center;
 
     &__name {

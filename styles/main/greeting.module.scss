@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background: linear-gradient(359.89deg, #FFFFFF 0.1%, rgba(255, 255, 255, 0) 19.38%, rgba(255, 255, 255, 0) 80.97%, #FFFFFF 99.9%), url('../public/bg/bg-greeting.png');
+  background: linear-gradient(359.89deg, #FFFFFF 0.1%, rgba(255, 255, 255, 0) 19.38%, rgba(255, 255, 255, 0) 80.97%, #FFFFFF 99.9%), url('../../public/bg/bg-greeting.png');
   // background-image: url('../public/bg/bg-greeting.png');
   background-size: 1904rem 110%; 
   background-position: 0 -80rem;
@@ -102,13 +102,13 @@
         &_watsapp {
           width: 62rem;
           height: 62rem;
-          background-image: url('../public/icons/social-watsapp.svg');
+          background-image: url('../../public/icons/social-watsapp.svg');
         }
         &_vk {
-          background-image: url('../public/icons/social-vk.svg');
+          background-image: url('../../public/icons/social-vk.svg');
         }
         &_telegram {
-          background-image: url('../public/icons/social-telegram.svg');
+          background-image: url('../../public/icons/social-telegram.svg');
         }
       }
 
@@ -149,13 +149,13 @@
       &_icon {
         width: 34rem;
         height: 34rem;
-        background-image: url('../public/icons/ring-dark.svg');
+        background-image: url('../../public/icons/ring-dark.svg');
         background-size: cover;
         margin: 0 10rem 0 0;
       }
 
       &:hover &_icon {
-        background-image: url('../public/icons/ring-white.svg');
+        background-image: url('../../public/icons/ring-white.svg');
       }
     }
   }
@@ -170,7 +170,7 @@
 @media screen and (max-width: 768px) {
   .greeting { 
     height: 957rem;
-    background-image: url('../public/bg/bg-greeting-mobile.png');
+    background-image: url('../../public/bg/bg-greeting-mobile.png');
     background-position: 0 -60rem;
     margin: 60rem 0 0;
     justify-content: center;

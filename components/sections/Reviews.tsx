@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { SliderReviews } from '../SliderReviews';
 import { mockReviews } from '../../mocks/mocks';
 import { ReviewsModel } from '../../interfaces/reviews'
-import styles from '../../styles/reviews.module.scss'
+import styles from '../../styles/main/reviews.module.scss'
 
 interface ReviewsProps {
   reviews: ReviewsModel[]

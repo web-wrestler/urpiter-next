@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import styles from '../../styles/consultation.module.scss'
+import styles from '../../styles/main/consultation.module.scss'
 
 export function Consultation(){
   const [shortForm, setShortForm] = useState(false);

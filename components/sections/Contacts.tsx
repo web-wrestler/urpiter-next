@@ -2,7 +2,7 @@ import Image from 'next/image';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import styles from '../../styles/contacts.module.scss'
 
-export function Contacts({onOpenPopup}){
+export default function Contacts({onOpenPopup}){
 
   return (
     <ScrollableAnchor id={'contacts'}>

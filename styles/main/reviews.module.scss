@@ -1,6 +1,6 @@
 .reviews {
   height: 860rem;
-  background-image: url('../public/bg/bg-reviews.png');
+  background-image: url('../../public/bg/bg-reviews.png');
   background-size: cover;
   color: #fff;
   display: flex;
@@ -45,7 +45,7 @@
 @media screen and (max-width: 768px) {
   .reviews { 
     height: 924rem;
-    background-image: url('../public/bg/bg-reviews-mobile.png');
+    background-image: url('../../public/bg/bg-reviews-mobile.png');
 
     &__title {
       margin: 36rem 0 61rem;
