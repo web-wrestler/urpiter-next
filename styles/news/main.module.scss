@@ -1,0 +1,195 @@
+.news_main {
+    min-height: 550rem;
+    background-image: url('../../public/bg//bg-news-page.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter';
+    color: #1B2B4B;
+
+    &__top {
+        width: 1520rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 80rem 200rem 0 200rem;
+    
+        &__container {
+          display: flex;
+          flex-direction: column;
+          
+          &_left{
+            align-items: flex-start;
+          }
+          &_center {
+            align-items: center;
+            transform: translateX(-10rem);
+          }
+          &_right {
+            align-items: flex-end;
+          }
+        }
+        &__text {
+          font-family: "Cormorant Unicase";
+          font-weight: 500;
+          font-size: 22rem;
+          line-height: 140%;
+          color: #1B2B4B;
+          margin: 0 0 7rem;
+        }
+        &__line_left {
+          width: 197rem;
+          height: 1rem;
+          background: linear-gradient(90deg, #1B2B4B 6.56%, rgba(27, 43, 75, 0) 71.49%);
+        }
+        &__line_center {
+          width: 149rem;
+          height: 1rem;
+          background: radial-gradient(50% 50% at 50% 50%, #1B2B4B 0%, rgba(27, 43, 75, 0) 100%);
+        }
+        &__line_right {
+          width: 184rem;
+          height: 1rem;
+          background: linear-gradient(90deg, #1B2B4B 6.56%, rgba(27, 43, 75, 0) 100%);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 56rem;
+        line-height: 130%;
+        color: #1B2B4B;
+        margin: 56.6rem 0 0;
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 24rem 0 80rem;
+    }
+    &__item {
+        width: 1083rem;
+        height: 328rem;
+        margin: 30rem 0 0;
+        filter: drop-shadow(2rem 2rem 20rem rgba(70, 38, 0, 0.1));
+        border-radius: 20rem;
+        background-color: #fff;
+        display: flex;
+        padding: 0 50rem 0 0;
+        overflow: hidden;
+
+        &__image {
+          min-width: 321rem;
+          height: 328rem;
+        }
+
+        &__container {
+          display: flex;
+          flex-direction: column; 
+          justify-content: space-between;
+          margin: 36rem 0 0 82rem;
+        }
+        &__date {
+            font-family: 'Cormorant Unicase';
+            font-weight: 400;
+            font-size: 23.3rem;
+            line-height: 140%;
+            color: #637FA6;
+            margin: 0;
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 26rem;
+            line-height: 140%;
+            margin: 16rem 0 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        &__text {
+            font-weight: 500;
+            font-size: 16rem;
+            line-height: 160%;
+            margin: 8rem 0rem 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+        &__btn {
+            width: 170rem;
+            height: 37rem;
+            margin: 0 0 32.7rem;
+            background: #F2A446;
+            box-shadow: 1.9rem 2.5rem 3.8rem rgba(164, 94, 10, 0.2);
+            border-radius: 5.1rem;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 600;
+            font-size: 14rem;
+            line-height: 140%;
+            color: #fff;
+        }
+        &__btn:hover {
+            cursor: pointer;
+            background: #1B2B4B;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news_main {
+
+        &__top {
+            width: 640rem;
+            margin: 57rem auto 0;
+
+            &__container {    
+                &_center {
+                  transform: translateX(-20rem);
+                }
+            }
+        }
+        &__title {
+            font-size: 54rem;
+            margin: 50rem 0 0;
+        }
+        &__list {
+            margin: 43rem 0 80rem;
+        }
+        &__item {
+            width: 671rem;
+            height: 278rem;
+            margin: 25rem 0 0;
+            padding: 0 40rem 0 0;
+
+            &__image {
+                min-width: 271rem;
+                height: 278rem;
+            }
+            &__container {
+                margin: 17rem 0 0 32rem;
+            }
+            &__title {
+                margin: 4rem 0 0;
+                -webkit-line-clamp: 1;
+            }
+            &__text {
+                -webkit-line-clamp: 4;
+            }
+            &__btn {
+                width: 175rem;
+                height: 37rem;
+                margin: 0 0 23rem;
+            }
+        }
+    }
+}

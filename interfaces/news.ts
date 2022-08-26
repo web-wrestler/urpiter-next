@@ -5,6 +5,22 @@ export interface NewsModel {
     content: string,
     date: string,
     slug?: string,
-    slider: boolean
+    slider: boolean,
+    createdAt: string,
+    linkVideo: string,
+    avatarImage: {
+      data: {
+        attributes: {
+          url: string
+        }
+      }
+    },
+    screenshotWin: {
+      data: {
+        attributes: {
+          url: string
+        }
+      }
+    },
   }
 }

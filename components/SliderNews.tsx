@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Link from "next/link";
 import { Navigation, Pagination, A11y } from 'swiper';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown'
@@ -9,6 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import styles from '../styles/slider-news.module.scss'
 import { NewsModel } from "../interfaces/news";
+
 
 interface NewsProps {
   news: NewsModel[]
@@ -48,11 +50,13 @@ export function SliderNews({ news }: NewsProps) {
           if(item.attributes.slider){
             return (  
               <SwiperSlide className={styles.slide} key={item.id}>
-                <div className={styles.slide_container} > 
-                  <p className={styles.slide_container_date}>{item.attributes.date}</p>
-                  <h4 className={styles.slide_container_title}>{item.attributes.title}</h4>
-                  <ReactMarkdown className={styles.slide_container_text} children={item.attributes.content} />
-                </div>
+                <Link href={`/news/${item.attributes.slug}`}> 
+                  <a className={styles.slide_container} > 
+                    <p className={styles.slide_container_date}>{item.attributes.date ? item.attributes.date : item.attributes.createdAt.slice(0, -14)}</p>
+                    <h4 className={styles.slide_container_title}>{item.attributes.title}</h4>
+                    <ReactMarkdown className={styles.slide_container_text} children={item.attributes.content} />
+                  </a>
+                </Link>
               </SwiperSlide>
        )}})}
       

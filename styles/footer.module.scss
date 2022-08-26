@@ -89,11 +89,12 @@
 
   @media screen and (max-width: 768px) {
     .footer { 
-      height: 810rem;
+    //  height: 810rem;
+      height: 740rem;
       background: #1B2B4B;
 
       &__container {
-        grid-template-rows: 340rem 250rem;
+        grid-template-rows: 250rem 250rem;
         grid-template-columns: 350rem 300rem;
         margin: 93rem 0 0 70rem;
 
@@ -150,10 +151,11 @@
 
   @media screen and (max-width: 450px) {
     .footer { 
-      height: 860rem;
+     //@at-root height: 860rem;
+      height: 740rem;
 
       &__container {
-        grid-template-rows: 370rem 255rem;
+        grid-template-rows: 250rem 255rem;
         grid-template-columns: 342rem 300rem;
 
         &_nav {

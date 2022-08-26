@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import { Navigation } from "../Navigation";
 import styles from '../../styles/header.module.scss'
+import Link from 'next/link';
 
 export default function Header({toggleMobileMenu, onClose, active, style}){
   const [scroll, setScroll] = useState(0);
@@ -19,9 +20,11 @@ export default function Header({toggleMobileMenu, onClose, active, style}){
 
   return (
     <section className={`${styles.header} ${scroll > 50 && styles.header__scroll} ${(style === 'second') && styles.header__second}`}>
-      <div className={styles.header__logo}>
-        <Image loader={() => "/header/logo.png?w=257"} src={"/header/logo.png"} width={257} height={79} alt="Логотип"   />
-      </div>
+      <Link href={'/'}>
+        <a className={styles.header__logo}>
+          <Image loader={() => "/header/logo.png?w=257"} src={"/header/logo.png"} width={257} height={79} alt="Логотип"   />
+        </a>
+      </Link>
       <div className={styles.header__nav}>
         <Navigation active={active} onClose={onClose}/>
       </div>

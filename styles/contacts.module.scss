@@ -34,6 +34,10 @@
     &_info {
      margin: 35rem 0 0 200rem;
     }
+
+    &_address {
+      display: flex;
+    }
       
   }
 
@@ -47,6 +51,11 @@
     &_mobile {
       display: none;
     }
+  }
+
+  &__block {
+    width: 360rem;
+    margin: 0 42rem 0 0;
   }
 
   &__box {
@@ -105,7 +114,7 @@
   &__map {
       width: 761rem;
       height: 447rem;
-      margin: 205rem 0 0 42rem;
+      margin: 150rem 0 0 0rem;
       filter: drop-shadow(2rem 2rem 20rem rgba(0, 0, 0, 0.25));
       border-radius: 32rem;
       overflow: hidden;
@@ -114,10 +123,11 @@
 
 @media screen and (max-width: 768px) {
   .contacts { 
-    height: 2092rem;
-    background-image: url('../public/bg/bg-contacts-mobile.png');
+    height: 2463rem;
+    background-image: url(/_next/static/media/bg-contacts-mobile.a5fb2651.png);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position-y: 400rem;
 
     &__name {
       margin: 40rem auto 0;
@@ -133,6 +143,10 @@
        display: flex;
        flex-direction: column;
       }
+
+      &_address {
+        flex-direction: column;
+      }
     }
 
     &__title {
@@ -142,6 +156,11 @@
       &_mobile {
         display: inline;
       }
+    }
+
+    &__block {
+      width: 600rem;
+      margin: 20rem 0rem 0 0;
     }
 
     &__box {
@@ -164,16 +183,16 @@
       }
 
       &_text {
-        font-size: 36rem;
-        line-height: 48rem;
-        margin: 10rem 0 0 63rem;
+        font-size: 32rem;
+        line-height: 46rem;
+        margin: 12rem 0 0 63rem;
       }
     }
 
     &_btn {
       width: 416rem;
       height: 80rem;
-      margin: 60rem auto 0;
+      margin: 100rem auto 0;
       font-size: 26rem;
 
       &:hover {
@@ -188,7 +207,7 @@
       align-items: center;
       width: 100%;
       height: 94.5rem;
-      margin: 100rem 0 0;
+      margin: 50rem 0 0;
       background: #fff;
 
       font-weight: 700;
@@ -210,6 +229,10 @@
 
 @media screen and (max-width: 450px) {
   .contacts { 
+
+    height: 2500rem;
+    background-position-y: 430rem;
+
     &__name {
       margin: 60rem auto 0;
     }
@@ -219,7 +242,7 @@
       height: 100rem;
       font-size: 34rem;
       border-radius: 12rem;
-      margin: 60rem auto 0;
+      margin: 90rem auto 0;
     }
 
     &__caption {

@@ -12,15 +12,24 @@ export default function Footer(){
               Меню
             </li>
             <li className={styles.footer__container_nav_item}>
+              <Link href={'/'}> 
+                <a className={styles.footer__container_nav_link} >
+                  Главная
+                </a>
+              </Link>
+            </li>
+            <li className={styles.footer__container_nav_item}>
               <a href="#about" className={styles.footer__container_nav_link} >
                 О компании
               </a>
             </li>
 
             <li className={styles.footer__container_nav_item}>
-              <a href="#command" className={styles.footer__container_nav_link} >
-                Новости
-              </a>
+              <Link href={'/news'}> 
+                <a className={styles.footer__container_nav_link} >
+                  Новости
+                </a>
+              </Link>
             </li>
             <li className={styles.footer__container_nav_item}>
               <a href="#about" className={styles.footer__container_nav_link} >
@@ -55,7 +64,8 @@ export default function Footer(){
           </ul> 
 
           <ul className={styles.footer__container_nav}>
-            <li className={`${styles.footer__container_nav_item} ${styles.footer__container_nav_bottom_21}`}> 
+            <li></li>
+            {/* <li className={`${styles.footer__container_nav_item} ${styles.footer__container_nav_bottom_21}`}> 
               <span className={styles.text_orange}>Часы работы</span>
             </li>
             <li className={styles.footer__container_nav_item}>
@@ -66,7 +76,7 @@ export default function Footer(){
             </li>
             <li className={styles.footer__container_nav_item}>
               <span className={styles.text_orange}>Вс:</span>  <span className={styles.text_white}>по записи</span>
-            </li>
+            </li> */}
           </ul> 
           
           <div className={styles.footer__container_contacts}>

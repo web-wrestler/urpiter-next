@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { SliderNews } from '../SliderNews';
 import { mockNews } from '../../mocks/mocks'
 import { NewsModel } from '../../interfaces/news';
 import styles from '../../styles/main/news.module.scss';
+
 
 
 interface NewsProps {
@@ -12,6 +14,7 @@ interface NewsProps {
 
 export function News({ news: currentNews }: NewsProps){
   const [news, setNews] = useState(currentNews);
+  // console.log('news', news[0])
 
   useEffect(() => {
     console.log('currentNews', currentNews)
@@ -30,7 +33,10 @@ export function News({ news: currentNews }: NewsProps){
         <div className={styles.news__container} > 
           {news && <SliderNews news={news} />}
         </div>
-        <div className={styles.news__all_news}>Смотреть все новости</div>
+        <Link href={'/news'} passHref>
+          <a className={styles.news__all_news}>Смотреть все новости</a>
+        </Link>
+
       </section>
     </ScrollableAnchor>
   )

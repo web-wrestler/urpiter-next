@@ -25,10 +25,17 @@ export function Navigation({ active, onClose }){
             </a>
            </Link> 
         </li>
+        <li className={`${active == 'news' ? styles.nav__link_active : ''} ${styles.nav__item}`}>
+          <Link href={'/news'}>
+            <a className={styles.nav__link}>
+              Новости
+            </a>
+          </Link>
+        </li>
         <li className={styles.nav__item}>
           {/* <Link href={'/demo'}> */}
-            <a href="#news" className={styles.nav__link}>
-              Новости
+            <a href="#" className={styles.nav__link}>
+              Отзывы
             </a>
           {/* </Link> */}
         </li>

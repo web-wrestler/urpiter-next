@@ -11,12 +11,14 @@ import { Reviews } from '../components/sections/Reviews'
 import Contacts from '../components/sections/Contacts'
 import Footer from '../components/sections/Footer'
 import { Popup } from '../components/Popup';
+import { PopupImage } from '../components/PopupImage';
 import { MobileMenu } from '../components/MobileMenu';
 import { ButtonCall } from '../components/ButtonCall';
 import { Context } from '../popupsContext'
 
 import { NewsModel } from '../interfaces/news';
 import styles from '../styles/Home.module.scss'
+
 
 
 
@@ -27,7 +29,6 @@ export default function Home({ news, reviews }) {
     toggleMobileMenu, 
     isOpenMobileMenu, 
     isOpenPopup, 
-    namePopup 
   } = useContext(Context);
 
 

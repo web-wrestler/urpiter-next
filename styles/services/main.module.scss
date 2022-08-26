@@ -92,10 +92,16 @@
       font-size: 22rem;
       line-height: 180%;
     }
+    &__box {
+      display: flex;
+      align-items: self-end;
+      position: relative;
+
+    }
     &__btn {
       width: 383rem;
-      height: 57rem;
-      margin: 57rem 0 0;
+      height: 62rem;
+      margin: 57rem 52.8rem 0 0;
 
       background: #F2A446;
       box-shadow: 3rem 4rem 6rem rgba(164, 94, 10, 0.2);
@@ -110,6 +116,46 @@
     &__btn:hover {
       cursor: pointer;
       background-color: #1B2B4B;
+    }
+    &__price {
+      width: 323rem;
+      height: 62rem;
+      margin: 0rem 0 0;
+
+      background: transparent;
+      border-radius: 8rem;
+      border: 3rem solid #1B2B4B;
+      color: #1B2B4B;
+      font-family: 'Inter';
+      font-weight: 500;
+      font-size: 22rem;
+      line-height: 140%;
+
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__icon {
+        width: 48.3rem;
+        height: 48.3rem;
+        margin: 0 12rem 3rem 14rem;
+        background-image: url('../../public/icons/icon-price.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &__text {
+        font-weight: 300;
+        font-size: 18rem;
+        line-height: 140%;
+        color: #1B2B4B;
+        position: absolute;
+        bottom: -60rem;
+        right: 0;
+      }
     }
     &__img {
       width: 575rem;
@@ -279,20 +325,35 @@
   .services_main {
 
     &__top {
-      justify-content: center;
+      justify-content: space-between;
+      width: 640rem;
       margin: 80rem auto 0;
 
       &__container {
         
         &_left{
-          display: none;
+          // display: none;
         }
         &_center {
           transform: translateX(0rem);
         }
         &_right {
-          display: none;
+          // display: none;
         }
+      }
+
+      &__line_left {
+        width: 122rem;
+      }
+      &__line_center {
+       
+      }
+      &__line_right {
+        width: 129rem;
+      }
+
+      &__text_deckpop {
+        display: none;
       }
     }
     &__heading {
@@ -328,11 +389,31 @@
       &__text {
         text-align: center;
       }
+      &__box {
+        flex-direction: column;
+        align-items: center;
+      }
       &__btn {
-        width: 422rem;
+        width: 450rem;
         height: 80rem;
         margin: 67rem 0 0;
         font-size: 26rem;
+      }
+      &__price {
+        width: 450rem;
+        height: 80rem;
+        margin: 45rem 0 0;
+        font-size: 26rem;
+        &__icon {
+          width: 48.3rem;
+          height: 48.3rem;
+          margin: 0 26rem 3rem 40rem;
+        } 
+        &__text {
+          font-size: 23rem;
+          bottom: -75rem;
+          right: 20rem;
+        }
       }
       &__img {
         width: 550rem;
@@ -350,13 +431,13 @@
 
     &__list {
       margin: 27rem auto 84rem;
-      padding: 0 44rem;
+      padding: 0 20rem 0 40rem;
     }
 
     &__item {
       width: 137rem;
       height: 138rem;
-      margin: 41rem 41rem 0 0;
+      margin: 41rem 30rem 0 0;
       padding: 0 8rem;
 
       &:nth-child(4n+4) {
@@ -450,6 +531,38 @@
           font-size: 68rem;
           margin: 8rem 0 0;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .services_main {
+    &__list {
+      align-items: flex-end;
+      justify-content: center;
+      margin: 27rem auto 130rem;
+      padding: 0 20rem 0 20rem;
+    }
+    &__item {
+      width: 200rem;
+      height: 200rem;
+      margin: 60rem 25rem 0 0;
+
+      &:nth-child(4n+4) {
+        margin: 60rem 25rem 0 0;
+      }
+      &:nth-child(3n+3) {
+        margin: 60rem 0rem 0 0;
+      }
+      &__icon {
+        width: 140rem;
+        height: 140rem;
+        margin: 0rem 0 0;
+      }
+      &__text {
+        font-size: 20.3rem;
+        margin: 16.6rem 0 0;
       }
     }
   }
