@@ -2,12 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import NewsLayout from "./newsLayout";
+import FormRequest from '../../components/FormRequest';
+import { useContext } from 'react';
+import { Context } from '../../popupsContext';
 import stylesMain from '../../styles/news/main.module.scss';
 import stylesInner from '../../styles/news/inner.module.scss';
 
-import ServiceRequest from '../services/serviceRequest';
-import { useContext } from 'react';
-import { Context } from '../../popupsContext';
 
 export default function Inner({ currentNews }) {
   let src = process.env.API_URL_LOCAL || 'https://urpiter.com:1338';
@@ -65,7 +65,7 @@ export default function Inner({ currentNews }) {
           <div className={stylesInner.news_inner__content}><ReactMarkdown>{currentNews.content}</ReactMarkdown></div>      
      
        </section>
-       <ServiceRequest />
+       <FormRequest />
     </NewsLayout>
   )
 

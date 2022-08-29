@@ -62,7 +62,11 @@
       font-weight: 700;
       font-size: 56rem;
       line-height: 130%;
-      margin: 0 66rem 0 0;
+      margin: 0 337rem 0 0;
+
+      &_legal {
+        margin: 0 365rem 0 0;
+      }
     }
     &__icon {
       width: 172rem;
@@ -86,7 +90,7 @@
 
     }
     &__text {
-      width: 702rem;
+      width: 600rem;
       margin: 0;
       font-weight: 500;
       font-size: 22rem;
@@ -94,9 +98,9 @@
     }
     &__box {
       display: flex;
-      align-items: self-end;
+      align-items: flex-end;
       position: relative;
-
+      margin: 0 0 60rem;
     }
     &__btn {
       width: 383rem;
@@ -141,7 +145,7 @@
       &__icon {
         width: 48.3rem;
         height: 48.3rem;
-        margin: 0 12rem 3rem 14rem;
+        margin: 0 12rem 3rem 50rem;
         background-image: url('../../public/icons/icon-price.svg');
         background-size: contain;
         background-repeat: no-repeat;
@@ -157,16 +161,21 @@
         right: 0;
       }
     }
+
+    &__social {
+      margin: 10rem 0 0;
+    }
     &__img {
       width: 575rem;
       height: 410rem;
+      transform: translate(20rem,-47rem);
     }
   }
 
   &__tagline {
     display: flex;
     align-items: center;
-    margin: 140rem 0 0 85rem;
+    margin: 100rem 0 0 85rem;
 
     &__line {
       width: 88.7rem;
@@ -219,104 +228,6 @@
       margin: 10rem 0 0;
       text-align: center;
     }
-  }
-
-  &__request {
-    display: flex;
-    height: 402rem;
-    background-image: url('../../public/bg/bg-services-request.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Inter';
-    color: #fff;
-
-    &__container {
-      margin: 61rem 0 0 200rem;
-    }
-
-    &__title {
-      font-weight: 600;
-      font-size: 32rem;
-      line-height: 160%;
-      margin: 0;
-    }
-    &__text {
-      font-weight: 400;
-      font-size: 22rem;
-      line-height: 140%;
-      margin: 16rem 0 0;
-    }
-
-    &__form {
-      display: flex;
-      margin: 30rem 0 30rem;
-
-      &__input {
-        width: 555rem;
-        height: 79rem;
-        border: 1rem solid #C9D5E8;
-        box-shadow: inset 0 0 34rem #F2F2F2;
-        border-radius: 8rem;
-        padding-left: 16rem; 
-        padding-top: 0rem;
-        margin: 0 25rem 0 0 ;
-    
-        font-weight: 500;
-        font-size: 22rem;
-        line-height: 140%;
-        color: #071737;
-
-        &::placeholder {
-          color: #859AB5;
-        }
-      }
-
-      &__button {
-        width: 323rem;
-        height: 79rem;
-        background: #F2A446;
-        border-radius: 8rem; 
-        border: none;
-        font-weight: 600;
-        font-size: 22rem;
-        line-height: 140%;
-        color: #fff;
-        margin: 0rem 0;
-        &:hover {
-          cursor: pointer;
-          // background-color: #071737;
-        }
-      }
-
-      &_send {
-        font-weight: 600;
-        font-size: 32rem;
-        line-height: 160%;
-        margin: 90rem 180rem 0 50rem;
-      }
-    }
-
-    &__phone {
-      display: flex;
-      flex-direction: column;
-      margin: 128rem 0 0 225rem;
-
-      &__text {
-        font-weight: 500;
-        font-size: 24rem;
-        line-height: 140%;
-        margin: 0;
-      }
-      &__number {
-        font-family: 'Cormorant Infant';
-        font-weight: 700;
-        font-size: 64rem;
-        line-height: 140%;
-        margin: 24rem 0 0;
-        color: #fff;
-      }
-    }
-
   }
 
 }
@@ -407,13 +318,16 @@
         &__icon {
           width: 48.3rem;
           height: 48.3rem;
-          margin: 0 26rem 3rem 40rem;
+          margin: 0 26rem 3rem 90rem;
         } 
         &__text {
           font-size: 23rem;
           bottom: -75rem;
           right: 20rem;
         }
+      }
+      &__social {
+        margin: 10rem 0 0;
       }
       &__img {
         width: 550rem;
@@ -456,83 +370,6 @@
       }
     }
 
-    &__request {
-      flex-direction: column;
-      height: 694rem;
-      background-image: none;
-
-      &__container {
-        height: 426rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        background: #1B2B4B;
-      }
-
-      &__title {
-        font-size: 28rem;
-        line-height: 140%;
-        margin: 76rem 0 0;
-      }
-      &__text {
-        font-weight: 500;
-        font-size: 18rem;
-        margin: 14rem 0 0;
-        color: #C6D5EA;
-        opacity: 0.7;
-
-        &_modify {
-          transform: translateY(-205rem);
-        }
-      }
-
-      &__form {
-        flex-direction: column;
-        margin: 65rem 0 0rem; 
-
-        &__input {
-          width: 417rem;
-          height: 56rem;
-          border-radius: 6rem;
-          margin: 0 0rem 0 0 ;
-          font-size: 16rem;
-          line-height: 120%;
-        }
-        &__button {
-          width: 417rem;
-          height: 56rem;
-          border-radius: 6rem;
-          font-weight: 700;
-          font-size: 16rem;
-          margin: 16rem 0 0;
-        }
-        &_send {
-          font-size: 40rem;
-          line-height: 170%;
-          margin: 144rem 0 0 0rem;
-          width: 460rem;
-          text-align: center;
-        }
-      }
-
-      &__phone {
-        background: #F2A446;
-        height: 269rem;
-        margin: 0 0 0 0;
-        align-items: center;
-        justify-content: center;
-  
-        &__text {
-          font-size: 26rem;
-          margin: 0;
-        }
-        &__number {
-          font-size: 68rem;
-          margin: 8rem 0 0;
-        }
-      }
-    }
   }
 }
 

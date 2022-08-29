@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Link from "next/link";
 import { Navigation, Pagination, A11y } from 'swiper';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { ReviewsModel } from '../interfaces/reviews'
 import styles from '../styles/slider-reviews.module.scss'
+
 
 interface ReviewsProps {
   reviews: ReviewsModel[]
@@ -56,13 +58,17 @@ export function SliderReviews({ reviews }: ReviewsProps) {
           if(item.attributes.slider){
             return (  
               <SwiperSlide className={styles.slide} key={item.id}>
-                  <div className={styles.slide_avatar}> 
-                  {
-                    item.attributes.avatar.data && <Image loader={() => `${src + item.attributes.avatar.data.attributes.url}?w=120`} src={`${src + item.attributes.avatar.data.attributes.url}`} width={120} height={120}  alt='' />        
-                  }
-                  </div>
-                  <p className={styles.slide_name}>{item.attributes.name}</p>
-                  <p className={styles.slide_text}>{item.attributes.text}</p>
+                 <Link href={'/reviews'} passHref>
+                   <a className={styles.slide_link} >
+                      <div className={styles.slide_avatar}> 
+                      {
+                        item.attributes.avatar.data && <Image loader={() => `${src + item.attributes.avatar.data.attributes.url}?w=120`} src={`${src + item.attributes.avatar.data.attributes.url}`} width={120} height={120}  alt='' />        
+                      }
+                      </div>
+                      <p className={styles.slide_name}>{item.attributes.name}</p>
+                      <p className={styles.slide_text}>{item.attributes.content}</p>
+                    </a>
+                  </Link>
               </SwiperSlide>
             )}})}
       

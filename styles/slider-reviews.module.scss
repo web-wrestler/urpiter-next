@@ -22,6 +22,11 @@
   position: relative;
   padding: 0 5rem;
 
+  &_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
     
     &_avatar {
       width: 120rem;
@@ -55,7 +60,7 @@
       overflow: hidden;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 5;
     }
 
     &:hover {

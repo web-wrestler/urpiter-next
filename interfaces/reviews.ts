@@ -2,7 +2,7 @@ export interface ReviewsModel {
   id: number | string
   attributes: {
     name: string,
-    text: string,
+    content: string,
     avatar: {
       data: {
         attributes: {

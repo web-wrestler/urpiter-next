@@ -1,0 +1,172 @@
+.reviews_main {
+    min-height: 550rem;
+    background-image: url('../../public/bg//bg-reviews_page.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter';
+    color: #1B2B4B;
+
+    &__top {
+        width: 1520rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 80rem 200rem 0 200rem;
+    
+        &__container {
+          display: flex;
+          flex-direction: column;
+          
+          &_left{
+            align-items: flex-start;
+          }
+          &_center {
+            align-items: center;
+            transform: translateX(-10rem);
+          }
+          &_right {
+            align-items: flex-end;
+          }
+        }
+        &__text {
+          font-family: "Cormorant Unicase";
+          font-weight: 500;
+          font-size: 22rem;
+          line-height: 140%;
+          color: #1B2B4B;
+          margin: 0 0 7rem;
+        }
+        &__line_left {
+          width: 197rem;
+          height: 1rem;
+          background: linear-gradient(90deg, #1B2B4B 6.56%, rgba(27, 43, 75, 0) 71.49%);
+        }
+        &__line_center {
+          width: 149rem;
+          height: 1rem;
+          background: radial-gradient(50% 50% at 50% 50%, #1B2B4B 0%, rgba(27, 43, 75, 0) 100%);
+        }
+        &__line_right {
+          width: 184rem;
+          height: 1rem;
+          background: linear-gradient(90deg, #1B2B4B 6.56%, rgba(27, 43, 75, 0) 100%);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 56rem;
+        line-height: 130%;
+        color: #1B2B4B;
+        margin: 56.6rem 0 0;
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 24rem 0 80rem;
+    }
+    &__item {
+        width: 1083rem;
+        min-height: 300rem;
+        margin: 30rem 0 0;
+        filter: drop-shadow(2rem 2rem 20rem rgba(70, 38, 0, 0.1));
+        border-radius: 150rem;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 30rem 150rem 30rem 0;
+        overflow: hidden;
+
+        &__image {
+          min-width: 223rem;
+          height: 223rem;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 0 0 40rem;
+          border: 7.4rem solid #F2A446;
+          background-image: url('../../public/avatars/person.jpg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        &__container {
+          display: flex;
+          flex-direction: column; 
+          justify-content: space-between;
+          margin: 0rem 0 0 52rem;
+          
+        }
+        &__title {
+            font-weight: 700;
+            font-size: 26rem;
+            line-height: 140%;
+            margin: 0rem 0 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+        }
+        &__text {
+            font-weight: 500;
+            font-size: 16rem;
+            line-height: 160%;
+            margin: 8rem 0rem 0;
+            // overflow: hidden;
+            // display: -webkit-box;
+            // -webkit-box-orient: vertical;
+            // -webkit-line-clamp: 6;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reviews_main {
+
+        &__top {
+            width: 640rem;
+            margin: 57rem auto 0;
+
+            &__container {    
+                &_center {
+                  transform: translateX(-20rem);
+                }
+            }
+        }
+        &__title {
+            font-size: 54rem;
+            margin: 50rem 0 0;
+        }
+        &__list {
+            margin: 43rem 0 80rem;
+        }
+        &__item {
+            width: 671rem;
+            min-height: 260rem;
+            margin: 25rem 0 0;
+            padding: 30rem 50rem 30rem 0;
+
+            &__image {
+                min-width: 187rem;
+                height: 187rem;
+            }
+            &__container {
+                margin: 0rem 0 0 38rem;
+            }
+            &__title {
+                margin: 4rem 0 0;
+                font-size: 30rem;
+                -webkit-line-clamp: 1;
+            }
+            &__text {
+                -webkit-line-clamp: 4;
+                font-size: 20rem;
+            }
+        }
+    }
+}

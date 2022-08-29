@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import ServiceLayout from "../serviceLayout";
-//import { servicesPhysical } from '../../../mocks/mocks'
-import styles from '../../../styles/services/main.module.scss';
 import Link from 'next/link';
-import ServiceRequest from '../serviceRequest';
+import ServiceLayout from "../serviceLayout";
+import FormRequest from '../../../components/FormRequest';
 import { useContext } from 'react';
 import { Context } from '../../../popupsContext';
+import styles from '../../../styles/services/main.module.scss';
+import stylesGreeting from '../../../styles/main/greeting.module.scss';
+
 
 export default function ServicesLegalPage({ service }) {
   let src = process.env.API_URL_LOCAL || 'https://urpiter.com:1338';
@@ -35,11 +36,11 @@ export default function ServicesLegalPage({ service }) {
           </div>
         </div>
         <div className={styles.services_main__heading}>
-          <h1 className={styles.services_main__heading__title}>Юридические услуги</h1>
+          <h1 className={`${styles.services_main__heading__title} ${styles.services_main__heading__title_legal}`}>Юр. лицам</h1>
           <div className={styles.services_main__heading__icon}>
             <Image loader={() => "/elements/services-legal-mobile.png?w=172"} src={"/elements/services-legal-mobile.png"} width={172} height={204} alt="Иконка с весами"  />
           </div>
-          <h2 className={styles.services_main__heading__subtitle}>Для юридических лиц</h2>     
+          <h2 className={styles.services_main__heading__subtitle}></h2>     
         </div>
         <div className={styles.services_main__intro}>
           <div className={styles.services_main__intro__container}>
@@ -48,9 +49,20 @@ export default function ServicesLegalPage({ service }) {
               <button className={styles.services_main__intro__btn} onClick={handleOpenPopup}>Записаться на консультацию</button>
               <div className={styles.services_main__intro__price}>
                 <div className={styles.services_main__intro__price__icon}></div>
-                Открыть прайс лист</div>
-              <p className={styles.services_main__intro__price__text}>*Ознакомиться со стоимостью услуг</p>
+                Узнать цены</div>
+              <p className={styles.services_main__intro__price__text}></p>
             </div>
+            <ul className={`${stylesGreeting.greeting__info_contact_social} ${styles.services_main__intro__social}`}>
+              <li className={stylesGreeting.greeting__info_contact_social_item}>
+                <a href='https://wa.me/+79313329020?text=Сообщение+с+сайта' className={`${stylesGreeting.greeting__info_contact_social_link} ${stylesGreeting.greeting__info_contact_social_watsapp}`} target="_blank"></a>
+              </li>
+              <li className={stylesGreeting.greeting__info_contact_social_item}>
+                <a href='https://vk.com/urpitercom' className={`${stylesGreeting.greeting__info_contact_social_link} ${stylesGreeting.greeting__info_contact_social_vk}`} target="_blank"></a>
+              </li>
+              <li className={stylesGreeting.greeting__info_contact_social_item}>
+                <a href='https://t.me/UrPiter' className={`${stylesGreeting.greeting__info_contact_social_link} ${stylesGreeting.greeting__info_contact_social_telegram}`} target="_blank"></a>
+              </li>
+            </ul>
           </div>
           <div className={styles.services_main__intro__img}>
             <Image loader={() => "/elements/img-physical.png?w=575"} src={"/elements/img-physical.png"} width={575} height={410} alt="Адвокат" />
@@ -58,7 +70,7 @@ export default function ServicesLegalPage({ service }) {
         </div>
         <div className={styles.services_main__tagline}>
             <span className={styles.services_main__tagline__line}></span>
-            <h3 className={styles.services_main__tagline__title}>Выберете требуемую услугу:</h3>
+            <h3 className={styles.services_main__tagline__title}>Мы защищаем ваши интересы</h3>
         </div>
 
         <ul className={styles.services_main__list}>
@@ -80,7 +92,7 @@ export default function ServicesLegalPage({ service }) {
  
         </ul>   
        </section>
-       <ServiceRequest />
+       <FormRequest />
     </ServiceLayout>
   )
 

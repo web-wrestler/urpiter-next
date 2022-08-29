@@ -1,13 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import NewsLayout from "./newsLayout";
 import { useState } from 'react';
+import FormRequest from '../../components/FormRequest';
+import { NewsModel } from "../../interfaces/news";
 import styles from '../../styles/news/main.module.scss';
 import stylesUI from '../../styles/UI/ui.module.scss';
 
-import Link from 'next/link';
-import ServiceRequest from '../services/serviceRequest';
-
-import { NewsModel } from "../../interfaces/news";
 
 interface NewsProps {
     news: NewsModel[]
@@ -38,7 +37,7 @@ export default function NewsPage({ news }: NewsProps) {
               <div className={styles.news_main__top__line_center}></div>
             </div>
             <div className={`${styles.news_main__top__container} ${styles.news_main__top__container_right}`}>
-              <Link href={'/'} passHref>
+              <Link href={'/reviews'} passHref>
                 <a className={styles.news_main__top__text}>Отзывы клиентов</a>
               </Link>
               <div className={styles.news_main__top__line_right}></div>
@@ -81,7 +80,7 @@ export default function NewsPage({ news }: NewsProps) {
                 }
      
        </section>
-       <ServiceRequest />
+       <FormRequest />
     </NewsLayout>
   )
 

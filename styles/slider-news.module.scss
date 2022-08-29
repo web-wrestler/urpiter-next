@@ -57,7 +57,7 @@
       overflow: hidden;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 9;
+      -webkit-line-clamp: 8;
     }
 
     &::after{
@@ -95,7 +95,7 @@
     height: 417rem;
 
     &_container {
-      height: 360rem;
+      height: 380rem;
 
   
       &_date {

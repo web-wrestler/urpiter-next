@@ -32,19 +32,19 @@ export function Navigation({ active, onClose }){
             </a>
           </Link>
         </li>
-        <li className={styles.nav__item}>
-          {/* <Link href={'/demo'}> */}
-            <a href="#" className={styles.nav__link}>
+        <li className={`${active == 'reviews' ? styles.nav__link_active : ''} ${styles.nav__item}`}>
+          <Link href={'/reviews'}>
+            <a className={styles.nav__link}>
               Отзывы
             </a>
-          {/* </Link> */}
+          </Link>
         </li>
-        <li className={styles.nav__item}>
-          {/* <Link href={'/contact'}> */}
-            <a href="#contacts" className={styles.nav__link}>
+        <li className={`${active == 'contacts' ? styles.nav__link_active : ''} ${styles.nav__item}`}>
+          <Link href={'/contacts'}>
+            <a className={styles.nav__link}>
               Контакты
             </a>
-          {/* </Link> */}
+          </Link>
         </li>
       </ul>
     </nav>
